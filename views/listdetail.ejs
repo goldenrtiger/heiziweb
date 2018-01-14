@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    
+    <!-- Title Tag -->
+    <title>P2P</title>
+    <!-- <<Mobile Viewport Code>> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=6">
+            
+    <!-- <<Attched Stylesheets>> -->
+    <link rel="stylesheet" href="/css/main999.css" type="text/css" >
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="/css/media.css">
+    <script type="text/javascript" src="/javascripts/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.min.js"></script>    
+    <script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/javascripts/carousel.js"></script>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-fixed-top header">
+    <div class="col-md-12">
+          <div class="navbar-header" style="margin-right: 30%;" >    
+            <a class="navbar-brand" href="index"><i class="glyphicon glyphicon-menu-left"  style="font-size:14px;"></i>P2P资讯 </a>        
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse1">
+            <i class="glyphicon glyphicon-search"></i>
+            </button>
+        
+          </div>
+          <div class="collapse navbar-collapse" id="navbar-collapse1"  >
+            <div class="navbar-form pull-right">
+                <div class="input-group" style="max-width:470px;">
+                  <input type="text" class="form-control" placeholder="请输入搜索内容" name="srch-term" id="srch-term">
+                  <div class="input-group-btn">
+                    <button id="btn_search" class="btn btn-default btn-primary" ><i class="glyphicon glyphicon-search"></i></button>
+                  </div>
+                </div>
+            </div>
+
+          </div>  
+       </div> 
+  </nav>
+
+  <div class="blogwarp">
+    <% if (error != '')
+    {
+    %>
+      <div><%= error %></div>
+    <%
+    }else{
+    %>    
+
+    <div class="blog-title">
+      <p ><%= title %></p>
+    </div>
+
+    <div class="user-warp-item">
+      <!-- <div class="date" > -->
+        <%= date %>   浏览：<%= look_num %>
+      <!-- </div> -->
+    </div>
+    <div id = "blog-content" class="blog-content">
+      <%- content %>
+    </div>
+    <%
+    }
+    %>   
+
+  </div>
+  <script type="text/javascript">
+    var content = $('#blog-content').html();
+    function getbyid(id) {
+        return document.getElementById(id);
+    };
+    $("#btn_search").click(function() {
+      console.log("search");
+      var searchText = getbyid("srch-term").value;
+      console.log("searchText:"+searchText);
+      if (searchText != "")
+      {
+        console.log("有内容");
+        var regExp = new RegExp(searchText, 'g');
+        var newHtml = content.replace(regExp, '<span id="result" style="background:yellow;color:red;">' + searchText + '</span>');
+        if (newHtml != content)
+        {
+          $('#blog-content').html(newHtml);
+          var X = $('#result').offset().top;
+          var Y = $('#result').offset().left - 60;
+          console.log("X:"+X+"Y:"+Y);
+          window.scrollTo(X, Y);          
+        }
+      }
+      else
+      {
+        $('#blog-content').html(content);
+      }
+      $("#navbar-collapse1").collapse('hide');
+    });
+  </script>
+
+  
+  <footer>
+    <div class="hr">
+      <hr>
+    </div>
+    <div class="text">
+      <p>© Copyright </p>
+    </div>
+  </footer>
+
+  
+
+</body>
+</html>

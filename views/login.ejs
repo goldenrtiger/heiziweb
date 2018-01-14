@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    
+    <!-- Title Tag -->
+    <title>P2P</title>
+    <!-- <<Mobile Viewport Code>> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+            
+    <!-- <<Attched Stylesheets>> -->
+    <link rel="stylesheet" href="/css/main999.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+	  <link rel="stylesheet" type="text/css" href="/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
+    <script type="text/javascript" src="/javascripts/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.min.js"></script>    
+    <script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/javascripts/carousel.js"></script>
+    <script type="text/javascript" src="/javascripts/js999.js"></script>
+
+    <script type="text/javascript">
+
+      
+    </script>
+
+</head>
+
+<body>
+  
+  <section class="mainbody">
+    <div class="form-container">
+      <form action="/dologin" method="post">
+        <div>
+          <a class="h3 choice" style="border-bottom: red 2px solid;" href="/login/">登录</a>
+        </div>
+        <div>
+          <input type="text" name="username" placeholder="用户名或邮箱" id="username" class="form-control">
+        </div>
+        <div>
+          <input type="password" name="userpass" placeholder="密码" id="userpass" class="form-control">
+        </div>
+        <div>
+          <input type="submit" name="submit" value="登录" id="submit" class="btn btn-primary">
+        </div>
+        <% if (error){%>
+        <div class="errormess"><%=error%></div>
+        <%}%>
+      </form>
+    </div>
+  
+    <div></div>
+  </section>
+
+  <hr>
+
+
+
+
+  <footer>
+    <div>
+      <hr>
+      <div>
+        <p>© Copyright </p>
+      </div>
+    </div>
+  </footer>
+
+  
+
+</body>
+</html>

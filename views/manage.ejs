@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    
+    <!-- Title Tag -->
+    <title>P2P</title>
+    <!-- <<Mobile Viewport Code>> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+            
+    <!-- <<Attched Stylesheets>> -->
+    <link rel="stylesheet" href="/css/main999.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/footer.css">
+    <script type="text/javascript" src="/javascripts/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.min.js"></script>    
+    <script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/javascripts/carousel.js"></script>
+    <script type="text/javascript" src="/javascripts/js999.js"></script>
+    <script src="/javascripts/jquery.form.min.js"></script>
+    <script src="/ckeditor/ckeditor.js"></script>
+
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+      });
+      
+    </script>
+
+</head>
+
+<body>
+  
+  <nav class="navbar navbar-fixed-top header">
+    <div class="col-md-12">
+          <div class="navbar-header" >
+            
+            <a href="#" class="navbar-brand">后台管理</a>
+        
+          </div>
+    </div>
+  </nav>
+
+  <hr>
+
+<div style="margin:3rem 10% 0 10%;">
+
+    
+    <!-- ****************************************************************** -->
+  <form action="/manage1/pic" method = "post" enctype="multipart/form-data" class="form-inline" role="form" >
+    <div class="form-group">
+      <label  for="insertpic">图片</label>
+    </div>
+    <div class="form-group">
+      <label class="sr-only" for="picfile">文件输入</label>
+      <input name="picfile" id ="picfile" type="file">
+    </div>    
+    <button type="submit" class="btn btn-default">提交</button>
+  </form>
+  <!-- *************************************************************** -->
+<hr>
+</div>
+
+
+  <div style="margin: 2% 10% 2% 10%">
+    <p>导航栏修改</p> 
+    <a class="btn btn-primary " href="/write_content">写文章</a>
+
+    <form role="form" action="/delkeyword" method="post" id="delform" style="margin:5% 0 0 0;">  
+      <p>图片删除以及内容删除</p>
+      <% 
+        if (!error){
+          for (var i = pictab.length - 1; i >= 0; i--){ 
+            var pictabitem = pictab[i];  
+            if (pictabitem.keyword != null)
+            {            
+      %> 
+      <label>
+        <input type="checkbox" name = "picitemname" value="<%= pictabitem.name %>"> <%= pictabitem.name %>
+      </label>
+      <%
+            }
+        }
+      }else{
+      %>
+        <div><%= error %></div>
+      <%
+      }
+      %>  
+
+      <div style="margin:0 0 0 0;">
+      <div>  <button name = "btn_del" class="btn btn-default">删除</button> </div>  
+  <!-- <form role="form" action="/delkeyword" method="post">   -->
+    <div style="margin:5% 0 0 0;">
+      <ul class="nav nav-pills">
+        <!-- <script type="text/javascript" id="home_tab"></script> -->
+        <li class="active"><a href="#tab1" data-toggle="tab">推广动态</a></li>
+        <li><a href="#tab2" data-toggle="tab">推广清单</a></li>
+        <li><a href="#tab3" data-toggle="tab">网贷资讯</a></li>
+        <li><a href="#tab3" data-toggle="tab">自撸平台</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            More <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#tab6" data-toggle="tab">home6</a></li>
+            <li class="divider"></li>
+            <li><a href="#tab7" data-toggle="tab">home7</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+          <div id="tab1" class="tab-pane fade in active">
+            <div class="checkbox user-inline">  
+            <% 
+              if (!error){
+                for (var i = tab1list.length - 1; i >= 0; i--){ 
+                  var tab1listitem = tab1list[i];              
+            %>            
+            <li class="list-group-item"><%= tab1listitem.name %><span style="float: right;"><a href="delete?keyword=<%= tab1listitem.keyword %>"> 删除</a></span><span style="float: right;">&nbsp;|&nbsp;</span><span style="float: right;"><a href="edit?keyword=<%= tab1listitem.keyword %>"">编辑</a></span></li>
+            <%
+              }
+            }else{
+            %>
+              <div><%= error %></div>
+            <%
+            }
+            %>              
+            </div>
+            
+          </div>
+          <div id="tab2" class="tab-pane fade">
+            <div class="checkbox user-inline">  
+            <% 
+              if (!error){
+                for (var i = tab2list.length - 1; i >= 0; i--){ 
+                  var tab2listitem = tab2list[i];              
+            %>            
+            <li class="list-group-item"><%= tab2listitem.name %><span style="float: right;"><a href="delete?keyword=<%= tab2listitem.keyword %>"">删除</a></span><span style="float: right;">&nbsp;|&nbsp;</span><span style="float: right;"><a href="edit?keyword=<%= tab2listitem.keyword %>"">编辑</a></span></li>
+            <%
+              }
+            }else{
+            %>
+              <div><%= error %></div>
+            <%
+            }
+            %>              
+            </div>          
+          </div>
+          <div id="tab3" class="tab-pane fade">
+            <div class="checkbox user-inline">  
+            <% 
+              if (!error){
+                for (var i = tab3list.length - 1; i >= 0; i--){ 
+                  var tab3listitem = tab3list[i];              
+            %>            
+            <li class="list-group-item"><%= tab13istitem.name %><span style="float: right;"><a href="delete?keyword=<%= tab3listitem.keyword %>"">删除</a></span><span style="float: right;">&nbsp;|&nbsp;</span><span style="float: right;"><a href="edit?keyword=<%= tab3listitem.keyword %>"">编辑</a></span></li>
+            <%
+              }
+            }else{
+            %>
+              <div><%= error %></div>
+            <%
+            }
+            %>              
+            </div>           
+          </div>
+          <div id="tab4" class="tab-pane fade">
+            <div class="checkbox user-inline">  
+            <% 
+              if (!error){
+                for (var i = tab4list.length - 1; i >= 0; i--){ 
+                  var tab4listitem = tab4list[i];              
+            %>            
+            <li class="list-group-item"><%= tab4listitem.name %><span style="float: right;"><a href="delete?keyword=<%= tab4listitem.keyword %>"">删除</a></span><span style="float: right;">&nbsp;|&nbsp;</span><span style="float: right;"><a href="edit?keyword=<%= tab4listitem.keyword %>"">编辑</a></span></li>
+            <%
+              }
+            }else{
+            %>
+              <div><%= error %></div>
+            <%
+            }
+            %>              
+            </div>           
+          </div>
+          <div id="tab5" class="tab-pane fade">
+            <div class="checkbox user-inline">  
+            <% 
+              if (!error){
+                for (var i = tab5list.length - 1; i >= 0; i--){ 
+                  var tab5listitem = tab5list[i];              
+            %>            
+            <li class="list-group-item"><%= tab5listitem.name %><span style="float: right;"><a href="delete?keyword=<%= tab5listitem.keyword %>"">删除</a></span><span style="float: right;">&nbsp;|&nbsp;</span><span style="float: right;"><a href="edit?keyword=<%= tab5listitem.keyword %>"">编辑</a></span></li>
+            <%
+              }
+            }else{
+            %>
+              <div><%= error %></div>
+            <%
+            }
+            %>              
+            </div>           
+          </div>
+          <div id="tab6" class="tab-pane fade">
+            <div class="checkbox user-inline">  
+            <% 
+              if (!error){
+                for (var i = tab6list.length - 1; i >= 0; i--){ 
+                  var tab6listitem = tab6list[i];              
+            %>            
+            <li class="list-group-item"><%= tab6listitem.name %><span style="float: right;"><a href="delete?keyword=<%= tab6listitem.keyword %>"">删除</a></span><span style="float: right;">&nbsp;|&nbsp;</span><span style="float: right;"><a href="edit?keyword=<%= tab6listitem.keyword %>"">编辑</a></span></li>
+            <%
+              }
+            }else{
+            %>
+              <div><%= error %></div>
+            <%
+            }
+            %>              
+            </div>          
+          </div>
+          <div id="tab7" class="tab-pane fade">
+            <div class="checkbox user-inline">  
+            <% 
+              if (!error){
+                for (var i = tab7list.length - 1; i >= 0; i--){ 
+                  var tab7listitem = tab7list[i];              
+            %>            
+            <li class="list-group-item"><%= tab7listitem.name %><span style="float: right;"><a href="delete?keyword=<%= tab7listitem.keyword %>"">删除</a></span><span style="float: right;">&nbsp;|&nbsp;</span><span style="float: right;"><a href="edit?keyword=<%= tab7listitem.keyword %>"">编辑</a></span></li>
+            <%
+              }
+            }else{
+            %>
+              <div><%= error %></div>
+            <%
+            }
+            %>              
+            </div>          
+          </div>
+        </div>
+      </div>
+
+    </form>
+
+
+
+    
+  </div>
+<!-- ******************************************************************* -->
+
+<!-- ******************************************************************* -->
+  
+
+<script type="text/javascript">
+  $("#write_content").click(function() {
+      console.log("write_content");
+
+    });
+
+  $("#btn_del").click(function(){
+      console.log("btn_del");
+
+      if ( ((document.getElementById("picitemname").value) == null) || ((document.getElementById("keyword").value) == null)) 
+      {
+        alert("请填写完整！");
+      }
+      else 
+      {
+        $("delform").submit();
+      }
+
+
+  });
+
+  $("btn_addlist").click(function(){
+
+      if ( ((document.getElementById("addlistname").value) == null) || ((document.getElementById("addlistkeyword").value) == null) || ((document.getElementById("addlisttitle").value) == null)) 
+      {
+        alert("请填写完整！");
+      }
+      else 
+      {
+        $("addform").submit();
+      }
+  });
+
+</script>
+
+
+  <footer>
+    <div class="hr">
+      <hr>
+    </div>
+    <div class="text">
+      <p>© Copyright </p>
+    </div>
+  </footer>
+
+  
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ScrollTo：平滑滚动到页面指定位置</title>
+<script type="text/javascript" src="jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo.js"></script>
+<style type="text/css">
+.nav{width:500px; height:40px; margin:20px auto;}
+.nav li{float:left; width:100px; height:24px; line-height:24px}
+.box{height:500px}
+.box h3{height:32px; line-height:32px; padding-left:20px; font-size:14px}
+#pro,#ser,#job{ background-color:#f60;}
+#news,#con{ background:#06f;}
+</style>
+</head>
+<body>
+<ul class="nav">
+  <li><a href="javascript:void();" class="nav_pro">产品展示</a></li>
+  <li><a href="javascript:void();" class="nav_news">新闻中心</a></li>
+  <li><a href="javascript:void();" class="nav_ser">服务支持</a></li>
+  <li><a href="javascript:void();" class="nav_con">联系我们</a></li>
+  <li><a href="javascript:void();" class="nav_job">人才招聘</a></li>
+</ul>
+<div id="pro" class="box">
+  <h3>产品展示</h3>
+</div>
+<div id="news" class="box">
+  <h3>新闻中心</h3>
+</div>
+<div id="ser" class="box">
+  <h3>服务支持</h3>
+</div>
+<div id="con" class="box">
+  <h3>联系我们</h3>
+</div>
+<div id="job" class="box">
+  <h3>人才招聘</h3>
+</div>
+<script type="text/javascript">
+$(function(){
+  $(".nav_pro").click(function(){
+    $.scrollTo('#pro',500);
+  });
+  $(".nav_news").click(function(){
+    $.scrollTo('#news',800);
+  });
+  $(".nav_ser").click(function(){
+    $.scrollTo('#ser',1000);
+  });
+  $(".nav_con").click(function(){
+    $.scrollTo('#con',1200);
+  });
+  $(".nav_job").click(function(){
+    $.scrollTo('#job',1500);
+  });
+});
+</script>
+</body>
+</html>

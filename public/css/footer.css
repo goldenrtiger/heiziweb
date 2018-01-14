@@ -1,0 +1,21 @@
+footer{
+	margin-top: 5%;
+	background: #fff;
+	width:100%;
+	text-align: center;
+}
+
+.foot-word{
+	font-size: 2rem;
+}
+
+/*footer div{
+	padding: 50% 0 0.5% 0;
+}*/
+
+footer .hr{
+	padding: 50% 0 0.5% 0;
+}
+footer .text{
+	padding: 0.5% 0 0.5% 0;
+}

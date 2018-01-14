@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    
+    <!-- Title Tag -->
+    <title>P2P</title>
+    <!-- <<Mobile Viewport Code>> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+            
+    <!-- <<Attched Stylesheets>> -->
+    <link rel="stylesheet" href="/css/main999.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/footer.css">
+    <script type="text/javascript" src="/javascripts/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.min.js"></script>    
+    <script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/javascripts/carousel.js"></script>
+    <script type="text/javascript" src="/javascripts/js999.js"></script>
+    <script src="/javascripts/jquery.form.min.js"></script>
+    <script src="/ckeditor/ckeditor.js"></script>
+
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+      });
+      
+    </script>
+
+</head>
+
+<body>
+  
+  <nav class="navbar navbar-fixed-top header">
+    <div class="col-md-12">
+          <div class="navbar-header" >
+            
+            <a href="#" class="navbar-brand">后台管理</a>
+        
+          </div>
+    </div>
+  </nav>
+
+  <hr>
+
+  <div style="margin: 3rem 10% 2% 10%">
+    <form  action = "/addcontent" id="addform"  method = "post" role="form" >
+    <%
+        if (tab1 == 0)
+        { 
+          var name="";
+          var keyword="";
+          var title="";
+          var content = "";
+    %>
+    <p>导航栏修改</p> 
+      <div class="form-group">
+        <label for="addtabsel">名称</label>
+        <select class="combobox" name="addtabsel">
+          <option value="tab1">推广动态</option>
+          <option value="tab3">推广清单</option>
+          <option value="tab4">网贷资讯</option>
+          <option value="tab5">自撸平台</option>
+          <option value="tab6">tab6</option>
+          <option value="tab7">tab7</option>
+          <% 
+            if (!error){
+              for (var i = pictab.length - 1; i >= 0; i--){ 
+                var pictabtype = pictab[i];              
+          %> 
+          <option value="<%=pictabtype.name%>"> <%=pictabtype.name%></option>
+          <%
+            }
+          }else{
+          %>
+            <div><%= error %></div>
+          <%
+          }
+          %>  
+        </select>
+      </div>
+      <%
+        }          
+        else
+        {
+          var name = tab.name;
+          var title = tab.title;
+          var keyword = tab.keyword;
+          var content = tab.content;
+        }
+      %>
+
+      <div class="form-group">
+        <label for="addlistname">列表输入</label>
+        <input type="text" class="form-control" id="addlistname" name="addlistname"
+             placeholder="<%=tab.name%>" value="<%=name%>">
+      </div>
+      <div class="form-group">
+        <label for="addlistkeyword">列表关键字</label>
+        <input type="text" class="form-control" id="addlistkeyword" name="addlistkeyword" 
+             placeholder="<%=tab.keyword%>" value="<%=keyword%>">
+      </div>
+      <div class="form-group">
+        <label for="addlisttitle">列表title</label>
+        <input type="text" class="form-control" id="addlisttitle" name="addlisttitle" 
+             placeholder="<%=tab.title%>" value="<%=title%>" MaxLenth="25">
+      </div>
+
+      <textarea name="editor1" id="editor1" rows="10" cols="80">
+          <%=tab.content%>
+      </textarea>
+      <script>
+          CKEDITOR.replace( 'editor1' );
+      </script>
+
+    <button name="btn_addc" class="btn btn-default" value = "add?id=<%=tab1%>&kw=<%=tab.keyword%>" style="margin-top: 2%">发表</button>
+    <button name="btn_printc" class="btn btn-default" value = "print" style="margin-top: 2%">预览</button>
+
+
+    </form>
+    <hr>    
+  </div>
+<!-- ******************************************************************* -->
+
+<!-- ******************************************************************* -->
+  
+
+  <footer>
+    <div class="hr">
+      <hr>
+    </div>
+    <div class="text">
+      <p>© Copyright </p>
+    </div>
+  </footer>
+
+  
+
+</body>
+</html>
