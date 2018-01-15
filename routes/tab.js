@@ -184,7 +184,6 @@ exports.getmanage1list = function(req,res){
 		console.log("pic");
 
 		Promise.all([promise1, promise2, promise3, promise4, promise5, promise6, promise7, promise8]).then(function (result){
-						console.log("promise result[0]:"+ result[0]);
 						res.render('manage', {
 							tab1list: result[0],
 							tab2list: result[1],
