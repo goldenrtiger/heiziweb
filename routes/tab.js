@@ -213,28 +213,59 @@ exports.edit_content = function(req, res){
 	else
 	{
 		var keyword = req.query.keyword;	
-		var promise = findPiclist('pic');
-		Tab.findOne({keyword: keyword}, function (err, list){
-			if (list == null){
-				error = '该文章不存在！';
-				res.render({
-					error: error
-				});
-			}else{//todo
-				console.log("edit list:"+list);
-				promise.then(function (result){
-					console.log("edit promise:"+result.length);
-					res.render('editcontent', {
-						tab1:1,
-					    tab: list,
-						pictab:result,
-					    error:'',
-					});	
-				}).catch(function (err){
-					console.log(err);
-				});
-			}		
-		});
+		var type = req.query.pic;
+		console.log("edit type:"+type);
+		if (type == "0")
+		{
+			var promise = findPiclist('pic');
+			Tab.findOne({keyword: keyword}, function (err, list){
+				if (list == null){
+					error = '该文章不存在！';
+					res.render({
+						error: error
+					});
+				}else{//todo
+					console.log("edit list:"+list);
+					promise.then(function (result){
+						console.log("edit promise:"+result.length);
+						res.render('editcontent', {
+							tab1:1,
+						    tab: list,
+							pictab:result,
+						    error:'',
+						});	
+					}).catch(function (err){
+						console.log(err);
+					});
+				}		
+			});
+		}
+		else if (type == "1")
+		{
+			var promise = findPiclist('pic');
+			Pic.findOne({keyword: keyword}, function (err, list){
+				if (list == null){
+					error = '该文章不存在！';
+					res.render({
+						error: error
+					});
+				}else{//todo
+					console.log("edit list:"+list);
+					promise.then(function (result){
+						console.log("edit promise:"+result.length);
+						res.render('editcontent', {
+							tab1:2,
+						    tab: list,
+							pictab:result,
+						    error:'',
+						});	
+					}).catch(function (err){
+						console.log(err);
+					});
+				}		
+			});
+		}
+
 	}
 	
 }
@@ -257,7 +288,7 @@ exports.delete_content = function(req,res){
 		});		
 	}
 }
-
+//直接写文章
 exports.write_content = function(req, res){
 
 	if (req.session.sign == false)
@@ -291,6 +322,7 @@ exports.write_content = function(req, res){
 	
 }
 
+//编辑后发表
 exports.addcontent = function(req, res){
 	var val_addc, val_printc, val;
 	val_addc = req.body.btn_addc;
@@ -325,6 +357,33 @@ exports.addcontent = function(req, res){
 					console.log("title:"+title+"content:"+content+"keyword:"+keyword+"name:"+name);
 
 					var promise = updatetabcontent(val_kw,name,title,content,keyword,date,0,0,list.tab_num);
+					console.log("start to update content:");
+					promise.then(function (result){
+								res.send("添加成功");
+							}).catch(function (err){
+								console.log(err);
+							});
+				}		
+			});
+		}
+		else if (val_addc.indexOf("id=2") > 0)//edit
+		{
+			Pic.findOne({keyword: val_kw}, function (err, list){
+				if (list == null){
+					error = '该文章不存在！';
+					res.render({
+						error: error
+					});
+				}else{//todo
+					console.log("edit list:"+list);
+					var name = req.body.addlistname;
+					var title = req.body.addlisttitle;
+					var content = req.body.editor1;
+					var keyword = req.body.addlistkeyword;
+					var date = getTimeNow();
+					console.log("title:"+title+"content:"+content+"keyword:"+keyword+"name:"+name);
+
+					var promise = updatepiccontent(name,title,content,keyword,date,0,0);
 					console.log("start to update content:");
 					promise.then(function (result){
 								res.send("添加成功");

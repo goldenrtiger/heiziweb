@@ -91,12 +91,19 @@
           var content = tab.content;
         }
       %>
+      <%
+        if (tab1 != 2)
+        {
+      %>
 
       <div class="form-group">
         <label for="addlistname">列表输入</label>
         <input type="text" class="form-control" id="addlistname" name="addlistname"
              placeholder="<%=tab.name%>" value="<%=name%>">
       </div>
+      <%
+        }
+      %>
       <div class="form-group">
         <label for="addlistkeyword">列表关键字</label>
         <input type="text" class="form-control" id="addlistkeyword" name="addlistkeyword" 
