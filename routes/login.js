@@ -11,7 +11,7 @@ exports.checkLogin = function (req, res){
 		console.log("req.session"+req.session);
 		req.session.sign = true;
 		console.log("req.session.sigh:"+req.session.sign);
-		res.redirect('/manage1');
+		res.redirect('/manage');
 	}
 	else
 	{

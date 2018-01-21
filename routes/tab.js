@@ -9,7 +9,7 @@ function addlist (req, res, val){
 	var empty = 0;
 	var title = req.body.addlisttitle;
 	var content = req.body.editor1;
-	var keyword = Math.random();
+	var keyword = Math.random();//pic update不用这个keyword
 	console.log("keyword:"+keyword);
 	if((title == "") || (content == "<p>请在这里输入列表内容</p>") || (keyword == "") || (val == ""))
 	{
@@ -35,7 +35,7 @@ function addlist (req, res, val){
 		}
 		else {
 		console.log("update content:"+title+content+keyword);
-		var promise = updatepiccontent(val, title, content, keyword,date, like_num,look_num);
+		var promise = updatepiccontent(val, title, content, date, like_num,look_num);
 		console.log("start to update content:");
 		promise.then(function (result){
 					res.send("添加成功");
@@ -122,41 +122,6 @@ exports.getalllist = function(req,res){
 }
 
 exports.getmanagelist = function(req,res){	
-	var error = '';
-	console.log("getmanagelist");
-	var promise1 = findTablist('tab1');
-	console.log("tab1");
-	var promise2 = findTablist('tab2');
-	console.log("tab2");
-	var promise3 = findTablist('tab3');
-	console.log("tab3");
-	var promise4 = findTablist('tab4');
-	console.log("tab4");
-	var promise5 = findTablist('tab5');
-	console.log("tab5");
-	var promise6 = findTablist('tab6');
-	console.log("tab6");
-	var promise7 = findTablist('tab7');
-	console.log("tab7");
-
-	Promise.all([promise1, promise2, promise3, promise4, promise5, promise6, promise7]).then(function (result){
-					res.render('manage', {
-						tab1list: result[0],
-						tab2list: result[1],
-						tab3list: result[2],
-						tab4list: result[3],
-						tab5list: result[4],
-						tab6list: result[5],
-						tab7list: result[6],
-						error: error,
-					});	
-				}).catch(function (err){
-					console.log(err);
-				});
-}
-
-
-exports.getmanage1list = function(req,res){	
 	if (req.session.sign == false)
 	{		
 		console.log("getmanage1list");
@@ -199,14 +164,14 @@ exports.edit_content = function(req, res){
 
 	if (req.session.sign == false)
 	{		
-		console.log("getmanage1list");
+		console.log("getmanagelist");
 		res.redirect('/login');
 	}
 	else
 	{
 		var keyword = req.query.keyword;	
 		var type = req.query.pic;
-		console.log("edit type:"+type);
+		console.log("edit type:"+type+"keyword:"+keyword);
 		if (type == "0")
 		{
 			var promise = findPiclist('pic');
@@ -263,21 +228,41 @@ exports.edit_content = function(req, res){
 }
 
 exports.delete_content = function(req,res){
-	var keyword = req.query.keyword;	
+	var keyword = req.query.keyword;
+	var type = req.query.pic;	
 	var error;
 	if (keyword != null)
 	{
-		Tab.remove({keyword:keyword}, function(err,data){
-			error |= err;
-			if(error) {
-				res.send(error);
-				return;
-			}
-			else
-			{
-				res.send("删除成功！");
-			}
-		});		
+		if (type == "0")
+		{
+			console.log("tab delete;");
+			Tab.remove({keyword:keyword}, function(err,data){
+				error |= err;
+				if(error) {
+					res.send(error);
+					return;
+				}
+				else
+				{
+					res.send("删除成功！");
+				}
+			});				
+		}	
+		else if (type == "1")
+		{
+			console.log("pic delete;");
+			Pic.remove({keyword:keyword}, function(err,data){
+				error |= err;
+				if(error) {
+					res.send(error);
+					return;
+				}
+				else
+				{
+					res.send("删除成功！");
+				}
+			});		
+		}
 	}
 }
 //直接写文章
@@ -295,7 +280,7 @@ exports.write_content = function(req, res){
 			name:"请在这里输入列表名称",
 			title:"请在这里输入列表title",  //列表title
 			content: "请在这里输入列表内容",  //列表内容
-			keyword: "请在这里输入列表关键字", //列表关键字
+			keyword: Math.random(), //列表关键字
 		};
 
 		promise.then(function (result){
@@ -359,6 +344,8 @@ exports.addcontent = function(req, res){
 		}
 		else if (val_addc.indexOf("id=2") > 0)//edit
 		{
+			var val_kw = val_addc.split("kw=")[1];
+
 			Pic.findOne({keyword: val_kw}, function (err, list){
 				if (list == null){
 					error = '该文章不存在！';
@@ -367,11 +354,12 @@ exports.addcontent = function(req, res){
 					});
 				}else{//todo
 					console.log("edit list:"+list);
-					var name = req.body.addlistname;
+					// var name = req.body.addlistname;
+					var name = list.name;
 					var title = req.body.addlisttitle;
 					var content = req.body.editor1;
 					var date = getTimeNow();
-					console.log("title:"+title+"content:"+content+"keyword:"+keyword+"name:"+name);
+					console.log("title:"+title+"content:"+content+"keyword:"+val_kw+"name:"+name);
 
 					var promise = updatepiccontent(name,title,content,date,0,0);
 					console.log("start to update content:");
@@ -558,7 +546,7 @@ function findpicname(keyword){
 
 function updatepiccontent(name, title, content, date, like_num,look_num){
 	return new Promise(function (resolve, reject){
-		Pic.update({name: name}, {title:title, content:content,keyword:keyword,date:date,like_num:like_num,look_num:look_num}, function (err, doc){
+		Pic.update({name: name}, {title:title, content:content,date:date,like_num:like_num,look_num:look_num}, function (err, doc){
 			if (err){
 				reject('error');
 			}else{

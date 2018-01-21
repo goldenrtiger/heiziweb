@@ -31,7 +31,6 @@ router.post('/addcontent', function(req, res, next){
 router.post('/picclick', tab.getpiccontent);
 
 router.get('/manage', tab.getmanagelist);
-router.get('/manage1', tab.getmanage1list);
 
 // router.post('/postaddlist', function(req, res, next){  
 //   var val = req.body.addtabsel;

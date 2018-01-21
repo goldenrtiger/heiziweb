@@ -43,6 +43,7 @@ exports.manage1pic=function(req, res){
     }
 
     var tmp_title = req.body.pictitle;
+    var keyword = Math.random();
 
     var picmess = {
     	type: 'pic',
@@ -50,7 +51,7 @@ exports.manage1pic=function(req, res){
 		title:null,  //列表title
 		content: null,  //列表内容
 		date:  null, //发布日期
-		keyword: null,
+		keyword: keyword,
 		like_num: 0,  //喜欢数量
 		look_num: 0 //浏览次数
     };

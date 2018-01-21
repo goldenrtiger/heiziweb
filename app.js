@@ -74,7 +74,7 @@ app.use(function(err, req, res, next) {
 
 //连接mongodb数据库
 mongoose.Promise = global.Promise;  //不加这句会报错
-mongoose.connect('mongodb://127.0.0.1/remote'); 
+mongoose.connect('mongodb://127.0.0.1/mylist'); 
 mongoose.connection.on('open', function (){
   console.log('Connected to Mongoose');
 });
