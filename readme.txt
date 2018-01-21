@@ -34,3 +34,5 @@ $ ./mongod
 
 mongod -shutdown -dbpath=/usr/local/mongodb/data
 db.system.users.find();
+
+db.copyDatabase("目标数据库","我的数据库","ip地址：端口号");

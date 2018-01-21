@@ -9,8 +9,8 @@ function addlist (req, res, val){
 	var empty = 0;
 	var title = req.body.addlisttitle;
 	var content = req.body.editor1;
-	var keyword = req.body.addlistkeyword;
-	console.log("title:"+title);
+	var keyword = Math.random();
+	console.log("keyword:"+keyword);
 	if((title == "") || (content == "<p>请在这里输入列表内容</p>") || (keyword == "") || (val == ""))
 	{
 		res.send("请完整填写内容");
