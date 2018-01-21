@@ -1,0 +1,10 @@
+iptables -L -n            ##查看当前防火墙规则
+/etc/init.d/iptables save  ##保存防火墙规则，如果不进行保存的话 重启iptables之后规则将消失
+
+iptables -A INPUT -p tcp --dport 27017 -j ACCEPT      ##添加一个开放端口22的输入流的规则
+ 
+iptables -A OUTPUT -p tcp --sport 22 -j ACCEPT    ##添加一个开放端口22的输出流的规则
+
+/usr/sbin/iptables
+
+云服务器 ECS =》实例 ==》 管理 ==》本实例安全组==》配置规则 把27017端口 配置上去

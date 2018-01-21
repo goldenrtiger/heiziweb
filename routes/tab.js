@@ -167,23 +167,16 @@ exports.getmanage1list = function(req,res){
 		var error = '';
 		console.log("getmanagelist");
 		var promise1 = findTablist('tab1');
-		console.log("tab1");
 		var promise2 = findTablist('tab2');
-		console.log("tab2");
 		var promise3 = findTablist('tab3');
-		console.log("tab3");
 		var promise4 = findTablist('tab4');
-		console.log("tab4");
 		var promise5 = findTablist('tab5');
-		console.log("tab5");
 		var promise6 = findTablist('tab6');
-		console.log("tab6");
 		var promise7 = findTablist('tab7');
-		console.log("tab7");
 		var promise8 = findPiclist('pic');
-		console.log("pic");
 
 		Promise.all([promise1, promise2, promise3, promise4, promise5, promise6, promise7, promise8]).then(function (result){
+						// console.log("tab3:"+result[2]);
 						res.render('manage', {
 							tab1list: result[0],
 							tab2list: result[1],
