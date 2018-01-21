@@ -344,11 +344,10 @@ exports.addcontent = function(req, res){
 					var name = req.body.addlistname;
 					var title = req.body.addlisttitle;
 					var content = req.body.editor1;
-					var keyword = req.body.addlistkeyword;
 					var date = getTimeNow();
-					console.log("title:"+title+"content:"+content+"keyword:"+keyword+"name:"+name);
+					console.log("title:"+title+"content:"+content+"name:"+name);
 
-					var promise = updatetabcontent(val_kw,name,title,content,keyword,date,0,0,list.tab_num);
+					var promise = updatetabcontent(val_kw,name,title,content,date,0,0,list.tab_num);
 					console.log("start to update content:");
 					promise.then(function (result){
 								res.send("添加成功");
@@ -371,11 +370,10 @@ exports.addcontent = function(req, res){
 					var name = req.body.addlistname;
 					var title = req.body.addlisttitle;
 					var content = req.body.editor1;
-					var keyword = req.body.addlistkeyword;
 					var date = getTimeNow();
 					console.log("title:"+title+"content:"+content+"keyword:"+keyword+"name:"+name);
 
-					var promise = updatepiccontent(name,title,content,keyword,date,0,0);
+					var promise = updatepiccontent(name,title,content,date,0,0);
 					console.log("start to update content:");
 					promise.then(function (result){
 								res.send("添加成功");
@@ -558,7 +556,7 @@ function findpicname(keyword){
 	});
 }
 
-function updatepiccontent(name, title, content, keyword,date, like_num,look_num){
+function updatepiccontent(name, title, content, date, like_num,look_num){
 	return new Promise(function (resolve, reject){
 		Pic.update({name: name}, {title:title, content:content,keyword:keyword,date:date,like_num:like_num,look_num:look_num}, function (err, doc){
 			if (err){
@@ -570,9 +568,9 @@ function updatepiccontent(name, title, content, keyword,date, like_num,look_num)
 	});
 }
 
-function updatetabcontent(keyword, name, title, content, keyword,date, like_num,look_num,tabnum){
+function updatetabcontent(keyword, name, title, content, date, like_num,look_num,tabnum){
 	return new Promise(function (resolve, reject){
-		Tab.update({keyword: keyword}, {name:name,title:title, content:content,keyword:keyword,date:date,like_num:like_num,look_num:look_num,tab_num:tabnum}, function (err, doc){
+		Tab.update({keyword: keyword}, {name:name,title:title, content:content,date:date,like_num:like_num,look_num:look_num,tab_num:tabnum}, function (err, doc){
 			if (err){
 				reject('error');
 			}else{
