@@ -9,6 +9,7 @@ var tmp_counter = 0;
 
 router.get('/', tab.getalllist);
 router.get('/index', tab.getalllist);
+router.get('/search', tab.searchkw);
 
 // router.get('/gettab1list',tab1.getalllist);
 

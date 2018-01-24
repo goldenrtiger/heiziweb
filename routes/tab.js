@@ -450,6 +450,10 @@ exports.delkw = function(req, res){
 
 }
 
+exports.searchkw = function(req, res){
+	console.log("searchkw:");
+}
+
 //获得某条list的信息，并更新浏览次数
 exports.getpiccontent = function (req, res){
 	var picname = req.body.submit;
