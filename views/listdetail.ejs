@@ -88,8 +88,10 @@
         if (newHtml != content)
         {
           $('#blog-content').html(newHtml);
-          var X = $('#result').offset().top;
-          var Y = $('#result').offset().left - 60;
+          var winht = window.innerHeight;
+          console.log("clientHeight:"+winht);
+          var X = $('#result').offset().left;
+          var Y = $('#result').offset().top-60;
           console.log("X:"+X+"Y:"+Y);
           window.scrollTo(X, Y);          
         }

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    
+    <!-- Title Tag -->
+    <title>P2P</title>
+    <!-- <<Mobile Viewport Code>> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=6">
+            
+    <!-- <<Attched Stylesheets>> -->
+    <link rel="stylesheet" href="/css/main999.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="/css/media.css">
+    <script type="text/javascript" src="/javascripts/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.min.js"></script>    
+    <script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/javascripts/carousel.js"></script>
+    <script type="text/javascript" src="/javascripts/js999.js"></script>
+
+    <script type="text/javascript">
+
+    </script>
+
+</head>
+
+<body>
+  
+  <nav class="navbar navbar-fixed-top header">
+    <div class="col-md-12">
+          <div class="navbar-header" >
+            
+            <a class="navbar-brand" href="login">P2P资讯</a>
+            <button type="button" class="navbar-toggle btn-lg" data-toggle="collapse" data-target="#navbar-collapse1">
+            <i class="glyphicon glyphicon-search" style="color:#337ab7;"></i>
+            </button>
+        
+          </div>
+          <div class="collapse navbar-collapse" id="navbar-collapse1"  >
+            <div class="navbar-form pull-right">
+                <div class="input-group" style="max-width:470px;">
+                  <input type="text" class="form-control" placeholder="请输入搜索内容" name="srch-term" id="srch-term">
+                  <div class="input-group-btn">
+                    <button id="btn_search" class="btn btn-default btn-primary" ><i class="glyphicon glyphicon-search"></i></button>
+                  </div>
+                </div>
+            </div>
+
+          </div>  
+       </div> 
+  </nav>
+
+<!-- <form role="form" action="/tabsearchlist" method="post">
+    <% 
+      if (!error){
+        for (var i = tabsearch.length - 1; i >= 0; i--){ 
+          var searchterm = tabsearch[i]._source;      
+          if (i == 0)
+          {        
+    %>         
+            <li name="searchtermtitle" value="<%=searchterm.title%>" data-target="#carousel-example-generic" data-slide-to="<%= i %>" class="active"><%=searchterm.title%></li>
+    <%
+          }
+          else {
+    %>
+            <li name ="searchtermtitle" value="<%=searchterm.title%>" data-target="#carousel-example-generic" data-slide-to="<%= i %>"><%=searchterm.title%></li>
+    <%
+          }
+      }
+    }else{
+    %>
+      <div><%= error %></div>
+    <%
+    }
+    %>
+</form> -->
+<div style="margin-top: 7rem;">共搜索到<%=tabsearch.length%>条信息：</div>
+<ul class="list-group list-group-flush" style="margin-top: 1rem;">
+    <% 
+      if (!error){
+        for (var i = tabsearch.length - 1; i >= 0; i--){ 
+          var searchterm = tabsearch[i]._source;      
+    %> 
+    <div style="margin-left: 2%;height: 5rem; overflow: hidden;">
+      <div style="font-weight: bold; font-size: 1.6rem;">
+        <a href="searchtab?name=<%searchterm.name>"><p><u><%=searchterm.title%></u></p></a>
+      </div>
+      <div style="font-size: 1.3rem;">  
+        <%-searchterm.content%>
+      </div>
+    </div>
+    <%
+      }
+    }else{
+    %>
+      <div><%= error %></div>
+    <%
+    }
+    %>
+
+</ul>
+
+  
+  <footer>
+    <div class="hr">
+      <hr>
+    </div>
+    <div class="text">
+      <p>© Copyright </p>
+    </div>
+  </footer>
+
+</body>
+</html>

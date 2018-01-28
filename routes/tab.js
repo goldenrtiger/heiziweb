@@ -485,6 +485,58 @@ exports.getpiccontent = function (req, res){
 		
 	});
 }
+exports.searchtab = function (req, res){
+	var val = req.query.name;
+	var error = '';
+	console.log("title:"+title);
+	Tab.findOne({name: val}, function (err, list){
+		if (list == null){
+			error = '该文章不存在！';
+			// res.render({
+			// 	error: error
+			// });
+
+			Pic.findOne({name:val}, function(err, list){
+				if (list == null) {
+					error = '该文章不存在！';
+					res.render({
+						error: error
+					});
+				}
+				else{
+					//更新文章阅读次数
+					var promise = picupdateLook_num(val);
+					promise.then(function (result){
+						res.render('listdetail', {
+						    title: list.title,
+						    content: list.content,
+						    date:list.date,
+						    error:'',
+						    look_num: list.look_num+1,
+						});	
+					}).catch(function (err){
+						console.log(err);
+					});					
+				}
+			});
+		}else{
+
+			//更新文章阅读次数
+			var promise = updateLook_num(val);
+			promise.then(function (result){
+				res.render('listdetail', {
+				    title: list.title,
+				    content: list.content,
+				    date:list.date,
+				    error:'',
+				    look_num: list.look_num+1,
+				});	
+			}).catch(function (err){
+				console.log(err);
+			});
+		}		
+	});
+}
 //获得某条list的信息，并更新浏览次数
 exports.getlistcontent = function (req, res, tablistname){
 	var val = tablistname;

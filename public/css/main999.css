@@ -105,9 +105,9 @@ h3,h4,h5 {
 
 .divcss5-min {min-height: 6rem}
 
-.mycarousel {position: relative; top:6rem;left: 0.1rem;}
+.mycarousel {position: relative; top:7rem;left: 0.1rem;}
 
-.myTab {position: relative; top:8rem; margin-left: 0; margin-right: 1%; font-size:1rem;}
+.myTab {position: relative; top:8rem; margin-left: 0; margin-right: 1%; font-size:16px;}
 
 .article_title {
   margin-top:1rem;

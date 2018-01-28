@@ -5,11 +5,14 @@ var tab = require('./tab');
 require('../modules/search');
 var login = require('./login');
 var pic = require('./pic');
+var sear = require('./search');
 var tmp_counter = 0;
 
 router.get('/', tab.getalllist);
 router.get('/index', tab.getalllist);
-router.get('/search', tab.searchkw);
+router.get('/search', sear.esearch);
+router.get('/searchtab', tab.searchtab);
+
 
 // router.get('/gettab1list',tab1.getalllist);
 

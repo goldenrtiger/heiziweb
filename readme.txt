@@ -1,5 +1,10 @@
 运行MongoDB
-mongod --dbpath G:\work\LOL\web\database\mongodb\data\db --port 27018
+mongod --dbpath G:\work\LOL\web\database\mongodb\data\db1 --port 27018
+
+mongod --dbpath G:\work\LOL\web\database\mongodb\data\fromheiziwebnew
+
+mongod --dbpath G:\work\LOL\web\database\mongodb\data\db1 --replSet myDevReplSet
+
 
 
 /bin/mongod --dbpath /data/db/mongodb/ 远程连接查看原因
@@ -36,3 +41,7 @@ mongod -shutdown -dbpath=/usr/local/mongodb/data
 db.system.users.find();
 
 db.copyDatabase("目标数据库","我的数据库","ip地址：端口号");
+db.copyDatabase("mylist","remote","60.205.189.160:27017");
+
+db.getCollection('Tab').ensureIndex({content:"米金社"})
+db.getCollection('Tab').ensureIndex({content:"text"})
