@@ -181,7 +181,7 @@ h3,h4,h5 {
 .blogwarp .blog-title p{
   text-align: center;  
   font-weight: bold;
-  font-size: 2rem
+  font-size: 24px;
 }
 
 .user-warp-item {
@@ -207,13 +207,15 @@ h3,h4,h5 {
 .blog-content{
   position: relative;
   padding: 2rem 0;
-  line-height: 1rem;
+  line-height: 30px;
   overflow:hidden; 
   text-overflow: ellipsis;
   display:-webkit-box; 
   -webkit-box-orient:vertical;
-  -webkit-line-clamp:3; 
+  -webkit-line-clamp:10; 
 }
+
+
 
 .blog-content:after {
     bottom: 0;
