@@ -1,0 +1,1592 @@
+2018-01-31 20:08:47,726 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2018-01-31 20:08:47,726 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.12 (v2.7.12:d33e0cf91556, Jun 27 2016, 15:24:40) [MSC v.1500 64 bit (AMD64)]
+2018-01-31 20:08:47,729 [ALWAYS] mongo_connector.connector:51 - Platform: Windows-7-6.1.7601-SP1
+2018-01-31 20:08:47,729 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.6.0
+2018-01-31 20:08:47,729 [WARNING] mongo_connector.connector:167 - MongoConnector: Can't find G:\work\LOL\web\nodejs\╨звс\v6\oplog.timestamp, attempting to create an empty progress log
+2018-01-31 20:08:47,757 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 3.6.0
+2018-01-31 20:08:47,757 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2018-01-31 20:08:48,832 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_bulk [status:N/A request:0.998s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004BE0908>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:08:49,838 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_bulk [status:N/A request:1.000s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000003A8AD68>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:08:50,831 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_bulk [status:N/A request:0.991s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004BE0320>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:08:51,832 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_bulk [status:N/A request:1.000s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004BE07B8>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:08:51,832 [CRITICAL] mongo_connector.oplog_manager:670 - Exception during collection dump
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\mongo_connector\oplog_manager.py", line 625, in do_dump
+    upsert_all(dm)
+  File "c:\python27\lib\site-packages\mongo_connector\oplog_manager.py", line 611, in upsert_all
+    mapped_ns, long_ts)
+  File "c:\python27\lib\site-packages\mongo_connector\util.py", line 46, in wrapped
+    reraise(new_type, exc_value, exc_tb)
+  File "c:\python27\lib\site-packages\mongo_connector\util.py", line 35, in wrapped
+    return f(*args, **kwargs)
+  File "c:\python27\lib\site-packages\mongo_connector\doc_managers\elastic2_doc_manager.py", line 367, in bulk_upsert
+    for ok, resp in responses:
+  File "c:\python27\lib\site-packages\elasticsearch\helpers\__init__.py", line 192, in streaming_bulk
+    raise_on_error, **kwargs)
+  File "c:\python27\lib\site-packages\elasticsearch\helpers\__init__.py", line 99, in _process_bulk_chunk
+    raise e
+ConnectionFailed: ConnectionError(<urllib3.connection.HTTPConnection object at 0x0000000004BE07B8>: Failed to establish a new connection: [Errno 10061] ) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x0000000004BE07B8>: Failed to establish a new connection: [Errno 10061] )
+2018-01-31 20:08:51,836 [ERROR] mongo_connector.oplog_manager:678 - OplogThread: Failed during dump collection cannot recover! Collection(Database(MongoClient(host=['127.0.0.1:27017'], document_class=dict, tz_aware=False, connect=True, replicaset=u'myDevReplSet'), u'local'), u'oplog.rs')
+2018-01-31 20:08:52,782 [ERROR] mongo_connector.connector:398 - MongoConnector: OplogThread <OplogThread(Thread-3, started 3656)> unexpectedly stopped! Shutting down
+2018-01-31 20:08:54,724 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.000s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004BE05C0>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:08:55,726 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.000s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004C7D320>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:08:56,736 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.010s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004BE0588>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:08:57,749 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.011s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004C7D320>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:08:59,756 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.007s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004BE05C0>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:00,770 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.011s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004BE0588>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:01,776 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.001s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004BE09B0>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:02,782 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.004s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004BE05C0>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:04,793 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.010s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004BE0588>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:05,806 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.011s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004BE03C8>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:06,812 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.001s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000003AAECC0>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:07,823 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.010s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004BE0588>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:09,826 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.000s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000003A8ADD8>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:10,838 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.011s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004C7D358>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:11,839 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.000s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000003AAECC0>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:12,861 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.020s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004C7D358>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:14,871 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.010s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004BE0748>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:15,882 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.010s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004BE05C0>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:16,901 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.017s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000003A8ADD8>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:17,901 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.000s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004BE0748>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:19,904 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.000s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000003AAECC0>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:20,907 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.001s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000003AAE630>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:21,908 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:0.999s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000003AAECC0>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:22,911 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.001s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000003AAE630>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:24,914 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.000s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000003A8ADD8>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:25,927 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.011s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000003AAECC0>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:26,924 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:0.995s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004BE0588>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:27,927 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.000s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000003AAECC0>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:29,923 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:0.992s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004BE0748>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:30,926 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.000s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000003A8ADD8>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:31,928 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.000s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004BE0588>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:32,933 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.002s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004BE0748>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:34,934 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.000s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000003A8ADD8>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:35,940 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.001s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000003AAECC0>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:36,950 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.006s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004BE03C8>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:37,954 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.000s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000003AAECC0>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:39,956 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:0.999s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000003A8ADD8>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:40,960 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.001s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000003AAE630>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:41,963 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.000s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004BE0748>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:42,969 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.000s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000003AAE630>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:44,982 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.010s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004BE05C0>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:45,984 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.001s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000003AAECC0>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:47,002 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.013s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004BE0748>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:48,015 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.011s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000003AAECC0>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:50,026 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.000s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004BE0748>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:51,029 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.001s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000003A8ADD8>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:52,045 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.010s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004BE05C0>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:53,061 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.006s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004BE0748>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:55,071 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.006s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000003A8ADD8>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:56,084 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.011s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000003AAECC0>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:57,082 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:0.997s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000004BE0588>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:09:58,085 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.001s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000003AAECC0>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:10:00,091 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.001s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000003A8ADD8>: Failed to establish a new connection: [Errno 10061] 
+2018-01-31 20:10:01,095 [WARNING] elasticsearch:97 - POST http://127.0.0.1:9200/_refresh [status:N/A request:1.003s]
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 115, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\python27\lib\site-packages\urllib3\util\retry.py", line 333, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "c:\python27\lib\site-packages\urllib3\connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\python27\lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "c:\python27\lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "c:\python27\lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "c:\python27\lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "c:\python27\lib\httplib.py", line 859, in send
+    self.connect()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "c:\python27\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000000003AAE630>: Failed to establish a new connection: [Errno 10061] 

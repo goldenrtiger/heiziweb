@@ -1,0 +1,127 @@
+        <div class="tab-pane fade" id="tab3" >
+          <div class="pill-contentsize">     
+            <div class="input-group mb-3 searchinput1 fixed-top">
+              <input id = "srch-term2" type="text" class="form-control" placeholder="ËÑË÷" aria-label="ËÑË÷" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button id = "btn_search2" class="btn btn-primary" style="width:80px;" type="button">ËÑË÷</button>
+              </div>
+            </div>
+            <div class="tabcontent1 bg-white">
+              <% if (error != '')
+              {
+              %>
+              <div><%= error%></div>
+              <%
+              }else{
+              %>
+              <div class="blogwarp">
+
+                <div class="blog-title text-center">
+                  <p1 ><%= tab3.title %></p1>
+                </div>
+
+                <div class="user-warp-item">
+                  <%= tab3.date %>   ä¯ÀÀ£º<%= tab3.look_num %>
+                </div>
+                <div id = "blog-content2" class="blog-content" style="font-size:17px;">
+                  <%- tab3.content %>
+                </div>
+              </div>
+              <%
+              }
+              %>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="tab-pane fade" id="tab4" >
+          <ul class="list-group pillsbelow">
+            <% 
+              if (!error){
+                for (var i = tab4list.length - 1; i >= 0; i--){ 
+                var tab4listitem = tab4list[i];
+            %>          
+              <button type="submit" name = "tablistname" value = "<%= tab4listitem.name %>" class="list-group-item list-group-item-action listbuttontext"><span class="text-warning font-italic float-left" style="padding-right: 20px;">1</span><%= tab4listitem.name %><span class="text-light bg-danger d-inline p-1 float-right rounded">ÐÂ</span></button>
+
+            <%
+              }
+            }else{
+            %>
+              <div><%= error %></div>
+            <%
+            }
+            %>
+          </ul>
+        </div>
+
+        <div class="tab-pane fade" id="tab5" >
+          <div class="pill-contentsize">     
+            <div class="input-group mb-3 searchinput1 fixed-top">
+              <input id = "srch-term2" type="text" class="form-control" placeholder="ËÑË÷" aria-label="ËÑË÷" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button id = "btn_search3" class="btn btn-primary" style="width:80px;" type="button">ËÑË÷</button>
+              </div>
+            </div>
+            <div class="tabcontent1 bg-white">
+              <% if (error != '')
+              {
+              %>
+              <div><%= error%></div>
+              <%
+              }else{
+              %>
+              <div class="blogwarp">
+
+                <div class="blog-title text-center">
+                  <p1 ><%= tab5.title %></p1>
+                </div>
+
+                <div class="user-warp-item">
+                  <%= tab5.date %>   ä¯ÀÀ£º<%= tab5.look_num %>
+                </div>
+                <div id = "blog-content3" class="blog-content" style="font-size:17px;">
+                  <%- tab5.content %>
+                </div>
+              </div>
+              <%
+              }
+              %>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="tab6" >
+          <div class="pill-contentsize">     
+            <div class="input-group mb-3 searchinput1 fixed-top">
+              <input id = "srch-term2" type="text" class="form-control" placeholder="ËÑË÷" aria-label="ËÑË÷" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button id = "btn_search4" class="btn btn-primary" style="width:80px;" type="button">ËÑË÷</button>
+              </div>
+            </div>
+            <div class="tabcontent1 bg-white">
+              <% if (error != '')
+              {
+              %>
+              <div><%= error%></div>
+              <%
+              }else{
+              %>
+              <div class="blogwarp">
+
+                <div class="blog-title text-center">
+                  <p1 ><%=tab6.title%></p1>
+                </div>
+
+                <div class="user-warp-item">
+                  <%= tab6.date %>   ä¯ÀÀ£º<%= tab6.look_num %>
+                </div>
+                <div id = "blog-content4" class="blog-content" style="font-size:17px;">
+                  <%- tab6.content%>
+                </div>
+              </div>
+              <%
+              }
+              %>
+            </div>
+          </div>
+        </div>

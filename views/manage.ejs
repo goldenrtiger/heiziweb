@@ -38,6 +38,8 @@
           <div class="navbar-header" >
             
             <a href="#" class="navbar-brand">后台管理</a>
+            <span  class="navbar-brand text-primary">|</span>
+            <a href="/" class="navbar-brand">首页</a>
         
           </div>
     </div>
@@ -94,23 +96,24 @@
       <div>  <button name = "btn_del" class="btn btn-default">删除</button> </div>  
   <!-- <form role="form" action="/delkeyword" method="post">   -->
     <div style="margin:5% 0 0 0;">
-      <ul class="nav nav-pills">
-        <!-- <script type="text/javascript" id="home_tab"></script> -->
-        <li><a href="#pic" data-toggle="tab">图片内容</a></li>
-        <li class="active"><a href="#tab1" data-toggle="tab">推广动态</a></li>
-        <li><a href="#tab2" data-toggle="tab">新上线平台</a></li>
-        <li><a href="#tab3" data-toggle="tab">推广清单</a></li>
-        <li><a href="#tab4" data-toggle="tab">网贷资讯</a></li>
-        <li><a href="#tab5" data-toggle="tab">自撸平台</a></li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            More <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-            <li><a href="#tab6" data-toggle="tab">pos机代理</a></li>
-            <li class="divider"></li>
-            <li><a href="#tab7" data-toggle="tab">home7</a></li>
-          </ul>
+      <ul class="nav nav-pills bg-white" id="pills-tab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link " data-toggle="pill" href="#pic" role="tab" aria-controls="pills-home" aria-selected="true">图片内容</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="pill" href="#tab1" role="tab" aria-controls="pills-home" aria-selected="true">推广动态</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="#tab3" role="tab" aria-controls="pills-contact" aria-selected="false">推广清单</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="#tab4" role="tab" aria-controls="pills-contact" aria-selected="false">网贷资讯</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="#tab5" role="tab" aria-controls="pills-contact" aria-selected="false">自撸平台</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="#tab6" role="tab" aria-controls="pills-contact" aria-selected="false">pos机代理</a>
         </li>
       </ul>
 

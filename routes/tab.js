@@ -105,15 +105,39 @@ exports.getalllist = function(req,res){
 	console.log("pic");
 
 	Promise.all([promise1, promise2, promise3, promise4, promise5, promise6, promise7, promise8]).then(function (result){
+					console.log("index promise result[0]:"+result[0]);
+					if ((result[0] == '')||(result[2] == '')||(result[4] == '')||(result[5] == '')) 
+					{
+						error = ' ';
+						console.log("result[0]:null");
+					}
+					else if((result[0].length > 1) || (result[2].length > 1) || (result[4].length > 1) || (result[5].length > 1) || (result[6].length > 1))
+					{
+						error = ' ';
+						console.log("render index error;");
+					}
+					else if((result[0][0] == '') || (result[2][0] == '') || (result[4][0] == '') || (result[5][0] == '') || (result[6][0] == ''))
+					{
+						error = ' ';
+						console.log("render index error;");
+					}
+					if (result[0] != '')
+					{
+						console.log("render index: result[0]"+result[0]);
+						console.log("render index: result[0][0]"+result[0][0]);
+					}
 					res.render('index', {
-						tab1list: result[0],
-						tab2list: result[1],
-						tab3list: result[2],
+						tab1: result[0][0],
+						// tab2: result[1][0],
+
+						tab3: result[2][0],
 						tab4list: result[3],
-						tab5list: result[4],
-						tab6list: result[5],
-						tab7list: result[6],
+						tab5: result[4][0],
+						tab6: result[5][0],
+
+						// tab7: result[6][0],
 						pictab:result[7],
+						tabnum:'tab1',
 						error: error,
 					});	
 				}).catch(function (err){
@@ -124,10 +148,10 @@ exports.getalllist = function(req,res){
 exports.getmanagelist = function(req,res){	
 	if (req.session.sign == false)
 	{		
-		console.log("getmanage1list");
+		console.log("login");
 		res.redirect('/login');
 	}
-	else
+	else if (req.session.sign == true)
 	{
 		var error = '';
 		console.log("getmanagelist");
@@ -141,7 +165,7 @@ exports.getmanagelist = function(req,res){
 		var promise8 = findPiclist('pic');
 
 		Promise.all([promise1, promise2, promise3, promise4, promise5, promise6, promise7, promise8]).then(function (result){
-						// console.log("tab3:"+result[2]);
+						console.log("tab1:"+result[0]);
 						res.render('manage', {
 							tab1list: result[0],
 							tab2list: result[1],
@@ -156,6 +180,11 @@ exports.getmanagelist = function(req,res){
 					}).catch(function (err){
 						console.log(err);
 					});
+	}
+	else
+	{
+		console.log("login");
+		res.redirect('/login');		
 	}
 	
 }
@@ -537,6 +566,93 @@ exports.searchtab = function (req, res){
 		}		
 	});
 }
+
+
+exports.upnum = function(req, res){
+	var num = req.query.num;
+	console.log("upnum:"+num);
+	Tab.findOne({tab_num: num}, function (err, list){
+		if (list == null){
+			error = '该文章不存在！';
+			res.send(error);
+			// res.render({
+			// 	error: error
+			// });
+		}else{
+			//更新文章阅读次数
+			var promise = updateLook_num(list.name);
+			// promise.then(function (result){
+			// 	res.render('index', {
+			// 	    title: list.title,
+			// 	    content: list.content,
+			// 	    date:list.date,
+			// 	    error:'',
+			// 	    look_num: list.look_num+1,
+			// 	});	
+			// }).catch(function (err){
+			// 	console.log(err);
+			// });
+		}		
+	});
+	var error = '';
+	console.log("getalllist");
+	var promise1 = findTablist('tab1');
+	console.log("tab1");
+	var promise2 = findTablist('tab2');
+	console.log("tab2");
+	var promise3 = findTablist('tab3');
+	console.log("tab3");
+	var promise4 = findTablist('tab4');
+	console.log("tab4");
+	var promise5 = findTablist('tab5');
+	console.log("tab5");
+	var promise6 = findTablist('tab6');
+	console.log("tab6");
+	var promise7 = findTablist('tab7');
+	console.log("tab7");
+	var promise8 = findPiclist('pic');
+	console.log("pic");
+
+	Promise.all([promise1, promise2, promise3, promise4, promise5, promise6, promise7, promise8]).then(function (result){
+					if ((result[0] == '')||(result[2] == '')||(result[4] == '')||(result[5] == '')) 
+					{
+						error = ' ';
+						console.log("result[0]:null");
+					}
+					else if((result[0].length > 1) || (result[2].length > 1) || (result[4].length > 1) || (result[5].length > 1) || (result[6].length > 1))
+					{
+						error = ' ';
+						console.log("render index error;");
+					}
+					else if((result[0][0] == '') || (result[2][0] == '') || (result[4][0] == '') || (result[5][0] == '') || (result[6][0] == ''))
+					{
+						error = ' ';
+						console.log("render index error;");
+					}
+					if (result[4] != '')
+					{
+						console.log("render index: result[4]"+result[4]);
+						console.log("render index: result[4][0]"+result[4][0]);
+					}
+					res.render('index', {
+						tab1: result[0][0],
+						// tab2: result[1][0],
+
+						tab3: result[2][0],
+						tab4list: result[3],
+						tab5: result[4][0],
+						tab6: result[5][0],
+
+						// tab7: result[6][0],
+						pictab:result[7],
+						tabnum:num,
+						error: error,
+					});	
+				}).catch(function (err){
+					console.log(err);
+				});
+};
+
 //获得某条list的信息，并更新浏览次数
 exports.getlistcontent = function (req, res, tablistname){
 	var val = tablistname;

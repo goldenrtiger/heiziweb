@@ -4,7 +4,6 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: arial,sans-serif;
   font-size: 20px;
-  line-height: 1.6;
 
   /*font: normal 10px Roboto,arial,sans-serif;*/
 }
@@ -13,7 +12,7 @@ body {
 .navbar-default .dropdown-menu {background-color:#ffffff;}
 .navbar-default .dropdown-menu li > a {padding-left:3rem;}
 
-.header {background-color:#ffffff;border-width:0;}
+.header {background-color:#ffffff;border-width:0;box-shadow: 0 0 0.4rem #888}
 .header .navbar-collapse {background-color:#ffffff;}
 .btn,.form-control,.panel,.list-group,.well {border-radius:0.1rem;box-shadow:0 0 0;}
 .form-control {border-color:#d7d7d7;}
@@ -105,7 +104,7 @@ h3,h4,h5 {
 
 .divcss5-min {min-height: 6rem}
 
-.mycarousel {position: relative; top:7rem;left: 0.1rem;}
+/*.mycarousel {position:fixed; top:1.5rem;left: 0.1rem;}*/
 
 .myTab {position: relative; top:8rem; margin-left: 0; margin-right: 1%; font-size:16px;}
 
@@ -118,67 +117,11 @@ h3,h4,h5 {
 .hr_sec{ margin-top:6rem; height:0.5rem;border:none;border-top:0.5rem ridge #45D6D8;}  
 .hr_article {height:0.1rem;border:none;border-top:0.1rem solid #000;}
 
-/*.user-warp-item div{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  margin-right:2rem;
-  color: #bbb;
-}*/
-
-/*.user-warp-item .user-date{
-  text-align: center;
-}*/
-
-
-/*
-.user-warp{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.user-inline{
-  display: inline-block;
-}
-
-.listwarp{
-  margin: 0 20%;
-}
-
-/* list ARTICLE */
-/*.list h2 {
-  font-weight: 700;
-}
-.list h5 {
-  margin: 0 0 0.5rem 0;
-}
-.list .btn {
-  margin: 0 0 0.5rem 0;
-}
-.article h1 {
-  font-size: 4.8rem;
-  font-weight: 700;
-  color: #2F4050;
-}
-.article p {
-  font-size: 1.5rem;
-  line-height: 2.6rem;
-}
-.article-title {
-  text-align: center;
-  margin: 4rem 0 10rem 0;
-}
-.article .ibox-content {
-  padding: 4rem;
-}*/
-
 .blogwarp{
-  margin: 8rem 1% 0 1%;
+  margin: 0.5rem 1rem 0 1rem;
 }
 
-.blogwarp .blog-title p{
+.blogwarp .blog-title p1{
   text-align: center;  
   font-weight: bold;
   font-size: 24px;
@@ -197,12 +140,14 @@ h3,h4,h5 {
 }
 
 .blog-title{
-  margin-top:1rem;
+  margin-top:0.1rem;
+  margin-bottom: 0.1rem;
 }
 
 .blog-title a{
   font-size: 1.3rem;
 }
+
 
 .blog-content{
   position: relative;
@@ -212,8 +157,35 @@ h3,h4,h5 {
   text-overflow: ellipsis;
   display:-webkit-box; 
   -webkit-box-orient:vertical;
+  -webkit-line-clamp:100; 
+}
+
+.blog-content111{
+  position: relative;
+  padding: 2rem 0;
+  line-height: 30px;
+  overflow:hidden; 
+  text-overflow: ellipsis;
+  display: block;
+/*  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:300; */
+}
+
+.blog-contentbackup{
+  position: relative;
+  padding: 1rem 0rem;
+  line-height: 30px;
+  height: 700px;
+  word-wrap: break-word;
+  overflow-y: auto;
+  /*overflow:auto; */
+  /*text-overflow: ellipsis;*/
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
   -webkit-line-clamp:10; 
 }
+
 
 
 
@@ -310,6 +282,100 @@ h3,h4,h5 {
   -webkit-box-shadow: -2px 1px 2px rgba(100,100,100,0.1);
   box-shadow: -2px 1px 2px rgba(100,100,100,0.1);
 }
+
+.searchheader{
+  position: relative; 
+  /*top:7rem;*/
+  left: 0.5rem;
+  margin-right: 1rem;
+  margin-top: 70px;
+  background: #f8f8f8;
+  height: 45px;
+
+}
+
+.searchheader .p{
+  font-size: 15px;
+  padding-top: 13px;
+}
+
+/* pills font-size*/
+.pill-size {
+  font-size:18px;
+  margin:0.1px;
+  height: 50px;
+}
+
+.pill-contentsize {
+  font-size:16px;
+  top:1.5rem;
+  padding-left: 1rem;
+}
+
+/*.mycarousel {
+  margin-top: 2rem;
+}*/
+
+.mycarousel {
+  margin:50px 1px 0px 1px;
+  /*top:61px;left: 0.1rem;*/
+}
+
+.inputimg {
+  height: 400px;
+}
+
+.searchinput {
+  margin-top: 451px;
+  margin-right: 0px;
+  margin-left: 0px;
+  height: 3rem;
+}
+.searchinput1 {
+  margin-top: 50px;
+  margin-right: 0px;
+  margin-left: 0px;
+  height: 3rem;
+}
+.searchinput2 {
+  margin-top: 50px;
+  margin-right: 0px;
+  margin-left: 0px;
+  height: 36px;
+}
+.listarticle {
+  margin-top: 87px;
+}
+.pillsbelow {
+  font-size: 20px;
+  margin-top: 50px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.alltabcontent {
+  margin-top: 0.1px;
+}
+
+.tabcontent {
+  overflow:auto; 
+  height: 700px;
+  margin-top: 0px;
+  margin-right: 6rem;
+  margin-left: 6rem;
+}
+.tabcontent1 {
+  overflow:auto; 
+  height: 700px;
+  margin-top: 0px;
+  margin-right: 6rem;
+  margin-left: 6rem;
+}
+
+.listbuttontext {
+  padding-left: 5px;
+}
+
 
 
 

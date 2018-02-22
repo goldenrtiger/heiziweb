@@ -4,8 +4,9 @@ mongod --dbpath G:\work\LOL\web\database\mongodb\data\db1 --port 27018
 mongod --dbpath G:\work\LOL\web\database\mongodb\data\fromheiziwebnew
 
 mongod --dbpath G:\work\LOL\web\database\mongodb\data\db1 --replSet myDevReplSet
+mongo-connector -m 127.0.0.1:27017 -t 127.0.0.1:9200 -d elastic2_doc_manager
 
-
+db.Tab.remove({"id":"bar"})
 
 /bin/mongod --dbpath /data/db/mongodb/ 远程连接查看原因
 mongod --dbpath /data/db/mongodb1/

@@ -1,8 +1,12 @@
 var count=0;
 
-function fc(){
-	count++;
+// function fc(x){
+// 	count = x;
+
+// 	return count;	
+// }
+exports.issign = function(x) {
+	count = x;
 
 	return count;	
-}
-module.exports = fc;
+};

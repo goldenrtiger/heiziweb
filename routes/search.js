@@ -14,9 +14,10 @@ exports.esearch = function(req, res) {
 		q: keyword,
 	}).then(function(resp){
 		console.log("searchlist:"+resp.hits.hits.length);
-		console.log("searchlist:"+resp.hits.hits[0]._source.title);
+		console.log("searchlist title:"+resp.hits.hits[0]._source.title);
 		res.render('searchlist', {
 			tabsearch: resp.hits.hits,
+			keyword: keyword,
 			error: ''		
 		});
 	}, function(err) {

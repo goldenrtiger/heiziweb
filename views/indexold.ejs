@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    
+    <!-- Title Tag -->
+    <title>P2P</title>
+    <!-- <<Mobile Viewport Code>> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=6">
+            
+    <!-- <<Attched Stylesheets>> -->
+    <link rel="stylesheet" href="/css/main999.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="/css/media.css">
+
+    <script type="text/javascript">
+
+    </script>
+
+</head>
+
+<body>  
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link active" href="#tuiguang">推广动态</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#qingdan">推广清单</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#wangdai">网贷资讯</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">自撸平台</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">pos机代理</a>
+    </li>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+  </ul>
+
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="tuiguang" >
+      <div class="mycarousel">
+        <form action="picclick" method="post" name="picclick" >
+          <div id="carousel-example-generic" class="carousel slide " data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <% 
+              if (!error){
+                for (var i = pictab.length - 1; i >= 0; i--){ 
+                  var pictabtype = pictab[i];      
+                  if (i == 0)
+                  {        
+            %>         
+                    <li name="pictabtype" value="<%=pictabtype%>" data-target="#carousel-example-generic" data-slide-to="<%= i %>" class="active"></li>
+            <%
+                  }
+                  else {
+            %>
+                    <li name ="pictabtype" value="<%=pictabtype%>" data-target="#carousel-example-generic" data-slide-to="<%= i %>"></li>
+            <%
+                  }
+              }
+            }else{
+            %>
+              <div><%= error %></div>
+            <%
+            }
+            %>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <% 
+              if (!error){
+                for (var i = pictab.length - 1; i >= 0; i--){ 
+                  var pictabtype = pictab[i];      
+                  if (i == 0)
+                  {        
+            %> 
+                    <div class="item active">
+            <%
+                  }
+                  else {
+            %>
+                    <div class="item">
+            <%
+                  }
+            %>
+              <!-- <img src="/img/<%= pictabtype.name%>" alt="..." width="100%" onclick="formSubmit();" > -->
+              <input type="image" src="/img/<%= pictabtype.name%>" name="submit" alt="..." width="100%" value="<%=pictabtype.name%>">
+            </div>
+            <%
+            }
+            }else{
+            %>
+              <div><%= error %></div>
+            <%
+            }
+            %>
+          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="qingdan" >...</div>
+    <div class="tab-pane fade" id="wangdai" >...</div>
+  </div>
+
+
+<form role="form" action="/tablistcontent" method="post">
+  <div class="myTab">
+    <ul class="nav nav-pills " id="pills-tab" role="tablist">
+      <!-- <script type="text/javascript" id="home_tab"></script> -->
+      <li class="active"><a href="#tab1" data-toggle="tab">推广动态</a></li>
+      <li><a href="#tab2" data-toggle="tab">新上线平台</a></li>
+      <li><a href="#tab3" data-toggle="tab">推广清单</a></li>
+      <li><a href="#tab4" data-toggle="tab">网贷资讯</a></li>
+      <li><a href="#tab5" data-toggle="tab">自撸平台</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          More <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="#tab6" data-toggle="tab">pos机代理</a></li>
+          <li class="divider"></li>
+          <li><a href="#tab7" data-toggle="tab">home7</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="tab1" class="tab-pane fade in active">
+          <ul class="list-group">
+          <% 
+            if (!error){
+              for (var i = tab1list.length - 1; i >= 0; i--){ 
+                var tab1listitem = tab1list[i];              
+          %>          
+            <button type="submit" name = "tablistname" value = "<%= tab1listitem.name %>" class="list-group-item"><%= tab1listitem.name %></a></button>
+
+          <%
+            }
+          }else{
+          %>
+            <div><%= error %></div>
+          <%
+          }
+          %>
+          </ul>
+        </div>
+         <div id="tab2" class="tab-pane fade">
+          <ul class="list-group">
+          <% 
+            if (!error){
+              for (var i = tab2list.length - 1; i >= 0; i--){ 
+              var tab2listitem = tab2list[i];
+          %>          
+            <button type="submit" name = "tablistname" value = "<%= tab2listitem.name %>" class="list-group-item"><%= tab2listitem.name %></a></button>
+
+          <%
+            }
+          }else{
+          %>
+            <div><%= error %></div>
+          <%
+          }
+          %>
+          </ul>
+        </div>
+        <div id="tab3" class="tab-pane fade">
+          <ul class="list-group">
+          <% 
+            if (!error){
+              for (var i = tab3list.length - 1; i >= 0; i--){ 
+              var tab3listitem = tab3list[i];
+          %>          
+            <button type="submit" name = "tablistname" value = "<%= tab3listitem.name %>" class="list-group-item"><%= tab3listitem.name %></a></button>
+
+          <%
+            }
+          }else{
+          %>
+            <div><%= error %></div>
+          <%
+          }
+          %>
+          </ul>
+        </div>
+        <div id="tab4" class="tab-pane fade">
+          <ul class="list-group">
+          <% 
+            if (!error){
+              for (var i = tab4list.length - 1; i >= 0; i--){ 
+              var tab4listitem = tab4list[i];
+          %>          
+            <button type="submit" name = "tablistname" value = "<%= tab4listitem.name %>" class="list-group-item"><%= tab4listitem.name %></a></button>
+
+          <%
+            }
+          }else{
+          %>
+            <div><%= error %></div>
+          <%
+          }
+          %>
+          </ul>
+        </div>
+        <div id="tab5" class="tab-pane fade">
+          <ul class="list-group">
+          <% 
+            if (!error){
+              for (var i = tab5list.length - 1; i >= 0; i--){ 
+              var tab5listitem = tab5list[i];
+          %>          
+            <button type="submit" name = "tablistname" value = "<%= tab5listitem.name %>" class="list-group-item"><%= tab5listitem.name %></a></button>
+
+          <%
+            }
+          }else{
+          %>
+            <div><%= error %></div>
+          <%
+          }
+          %>
+          </ul>
+        </div>
+        <div id="tab6" class="tab-pane fade">
+          <ul class="list-group">
+          <% 
+            if (!error){
+              for (var i = tab6list.length - 1; i >= 0; i--){ 
+              var tab6listitem = tab6list[i];
+          %>          
+            <button type="submit" name = "tablistname" value = "<%= tab6listitem.name %>" class="list-group-item"><%= tab6listitem.name %></a></button>
+
+          <%
+            }
+          }else{
+          %>
+            <div><%= error %></div>
+          <%
+          }
+          %>
+          </ul>
+        </div>
+        <div id="tab7" class="tab-pane fade">
+          <ul class="list-group">
+          <% 
+            if (!error){
+              for (var i = tab7list.length - 1; i >= 0; i--){ 
+              var tab7listitem = tab7list[i];
+          %>          
+            <button type="submit" name = "tablistname" value = "<%= tab7listitem.name %>" class="list-group-item"><%= tab7listitem.name %></a></button>
+ 
+          <%
+            }
+          }else{
+          %>
+            <div><%= error %></div>
+          <%
+          }
+          %>
+          </ul>
+        </div>
+    </div>
+  </div>
+</form>
+  
+  <footer>
+    <div class="hr">
+      <hr>
+    </div>
+    <div class="text">
+      <p>© Copyright </p>
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+      // var x=0, count = 0, contentlen;
+      // var tabcontent = new Array()
+      // var tabhtml = new Array()
+      // $(document).ready(function() {
+      //   console.log("ready");
+      //   x = document.getElementsByClassName('list-group-item');
+
+      //   contentlen = x.length;
+      //   for (var i = 0; i < contentlen; i++)
+      //   {
+      //     tabhtml[i] = x[i];
+      //     tabcontent[i] = x[i].innerHTML;
+      //   }
+      //   count = 0;
+      //   function getbyid(id) {
+      //       return document.getElementById(id);
+      //   };
+
+      //   var putWordsObj = getbyid('srch-term');
+      //   putWordsObj.onfocus = function() {
+      //       if (this.value == '请输入搜索内容') this.value = '';
+      //   };
+      //   putWordsObj.onblur = function() {
+      //       if (!this.value) this.value = '请输入搜索内容';
+      //   };
+
+      // });
+
+      // function search_do(content, keyWord) {
+      //     var keyWordArr = keyWord.replace(/[\s]+/g, ' ').split(' ');
+      //     var re;
+      //     for (var n = 0; n < keyWordArr.length; n++) {
+      //         //re = new RegExp(">[\s\S]*?"+keyWordArr[n]+"[\s\S]*?<\S","gmi");
+      //         re = new RegExp("" + keyWordArr[n] + "", "gmi");
+      //         content1 = content.replace(re, '<span style="color:red;font-weight: bold;">' + keyWordArr[n] + '</span>');
+      //         if (content1 == content)
+      //         {
+      //           return 0;
+      //         }
+      //     }
+      //     return content;
+      // };
+
+      // function search() {
+      //   console.log("search");
+      // };
+
+      // function formSubmit(){
+      //   console.log("formSubmit");
+      //   document.picclick.submit();
+      // };
+
+      // function getbyid(id) {
+      //       return document.getElementById(id);
+      //   };
+      // $("#btn_search").click(function(){
+      //     console.log("search");
+      //     var keyWord = getbyid("srch-term").value;
+      //     if (keyWord != "请输入搜索内容")
+      //     {
+      //       console.log("count:"+count);
+      //       // if (count == 0)
+      //       // {            
+      //       //   x = document.getElementsByClassName('list-group-item');
+      //       //   count++;
+      //       // }
+      //       console.log("keyWord: "+keyWord+"length: "+x.length);//todo keyword == 0
+      //       for (var i = 0; i < contentlen; i++)
+      //       {
+      //         content = tabcontent[i];
+      //         console.log("content: "+content);
+      //         content = search_do(content, keyWord);
+      //         console.log(content);
+      //         if(content != 0)
+      //         {
+      //           console.log("count != 0");
+      //           $(".myTab").html(tabhtml[i]);
+      //           return;
+      //         }
+      //       }
+      //       if(content == 0)
+      //       {
+      //           console.log("content == 0");
+      //           content = '';              
+      //           $(".myTab").html('');            
+      //       }
+      //     }          
+      // $("#navbar-collapse1").collapse('hide');
+          
+
+      //   });
+      function getbyid(id) {
+            return document.getElementById(id);
+        };
+        
+      $("#btn_search").click(function(){
+        var keyWord = getbyid("srch-term").value;
+        console.log("btn_search:+keyWord:"+keyWord);
+        $("#navbar-collapse1").collapse('hide');
+         window.location.href="search?kw="+keyWord;  
+
+        });
+  </script>
+
+  <script type="text/javascript" src="/javascripts/jquery-3.2.1.js"></script>
+  <script type="text/javascript" src="/javascripts/jquery.min.js"></script>    
+  <script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/javascripts/carousel.js"></script>
+  <script type="text/javascript" src="/javascripts/js999.js"></script>
+
+</body>
+</html>

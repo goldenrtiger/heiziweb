@@ -32,8 +32,8 @@
     <div class="col-md-12">
           <div class="navbar-header" >
             
-            <a class="navbar-brand" href="login" style="font-size: 24px; height: 60px;">P2P资讯</a>
-<!--             <button type="button" class="navbar-toggle btn-lg" data-toggle="collapse" data-target="#navbar-collapse1">
+            <a class="navbar-brand" href="login">P2P资讯</a>
+            <button type="button" class="navbar-toggle btn-lg" data-toggle="collapse" data-target="#navbar-collapse1">
             <i class="glyphicon glyphicon-search" style="color:#337ab7;"></i>
             </button>
         
@@ -47,36 +47,59 @@
                   </div>
                 </div>
             </div>
-          </div>   -->
-    </div> 
+
+          </div>  
+       </div> 
   </nav>
 
-  <div class="searchheader">
-    <div class="p">共为您搜索到<span style="color:red;"><%=tabsearch.length%></span>条内容：</div>
-    <ul class="list-group" >      
-      <% 
+<!-- <form role="form" action="/tabsearchlist" method="post">
+    <% 
       if (!error){
-          for (var i = tabsearch.length - 1; i >= 0; i--){ 
-            var searchterm = tabsearch[i]._source;    
-      %> 
-      <script>
-        console.log("script");
-        var n = searchterm.content.indexof(keyword);
-        var content = searchterm.content.slice(n,n+10);
-      </script>
-      <li class="list-group-item" style="margin-top: 20px; box-shadow: 0 0 0.4rem #888;"><div style="font-size: 19px;"><a href="#"><u><%-searchterm.title%> </u></a></div><div style="font-size: 16px;"><%-content%></div></li>
-      <%
-        }
+        for (var i = tabsearch.length - 1; i >= 0; i--){ 
+          var searchterm = tabsearch[i]._source;      
+          if (i == 0)
+          {        
+    %>         
+            <li name="searchtermtitle" value="<%=searchterm.title%>" data-target="#carousel-example-generic" data-slide-to="<%= i %>" class="active"><%=searchterm.title%></li>
+    <%
+          }
+          else {
+    %>
+            <li name ="searchtermtitle" value="<%=searchterm.title%>" data-target="#carousel-example-generic" data-slide-to="<%= i %>"><%=searchterm.title%></li>
+    <%
+          }
       }
-      else {
-      %>
-        <div><%= error %></div>
-      <%
+    }else{
+    %>
+      <div><%= error %></div>
+    <%
+    }
+    %>
+</form> -->
+<div style="margin-top: 7rem;">共搜索到<%=tabsearch.length%>条信息：</div>
+<ul class="list-group list-group-flush" style="margin-top: 1rem;">
+    <% 
+      if (!error){
+        for (var i = tabsearch.length - 1; i >= 0; i--){ 
+          var searchterm = tabsearch[i]._source;      
+    %> 
+    <div style="margin-left: 2%;height: 5rem; overflow: hidden;">
+      <div style="font-weight: bold; font-size: 1.6rem;">
+        <a href="searchtab?name=<%searchterm.name>"><p><u><%=searchterm.title%></u></p></a>
+      </div>
+      <div style="font-size: 1.3rem;">  
+        <%-searchterm.content%>
+      </div>
+    </div>
+    <%
       }
-      %>
-    </ul>
-  </div>
-
+    }else{
+    %>
+      <div><%= error %></div>
+    <%
+    }
+    %>
+</ul>
 
   
   <footer>

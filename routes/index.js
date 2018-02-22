@@ -23,6 +23,8 @@ router.get('/login', function(req, res, next) {
     });
 });
 
+router.get('/tabh', tab.upnum);
+
 router.get('/edit', tab.edit_content);
 router.get('/delete', tab.delete_content);
 router.get('/write_content', tab.write_content);
