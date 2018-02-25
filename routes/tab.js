@@ -105,8 +105,8 @@ exports.getalllist = function(req,res){
 	console.log("pic");
 
 	Promise.all([promise1, promise2, promise3, promise4, promise5, promise6, promise7, promise8]).then(function (result){
-					console.log("index promise result[0]:"+result[0]);
-					if ((result[0] == '')||(result[2] == '')||(result[4] == '')||(result[5] == '')) 
+					console.log("index promise result[2]:"+result[2]);
+					if ((result[0] == '')||(result[2] == '') || (result[3] == '') || (result[4] == '')||(result[5] == '')) 
 					{
 						error = ' ';
 						console.log("result[0]:null");
@@ -116,7 +116,7 @@ exports.getalllist = function(req,res){
 						error = ' ';
 						console.log("render index error;");
 					}
-					else if((result[0][0] == '') || (result[2][0] == '') || (result[4][0] == '') || (result[5][0] == '') || (result[6][0] == ''))
+					else if((result[0][0] == '') || (result[2][0] == '') || (result[3][0] == '') || (result[4][0] == '') || (result[5][0] == '') || (result[6][0] == ''))
 					{
 						error = ' ';
 						console.log("render index error;");
@@ -573,11 +573,26 @@ exports.upnum = function(req, res){
 	console.log("upnum:"+num);
 	Tab.findOne({tab_num: num}, function (err, list){
 		if (list == null){
-			error = '该文章不存在！';
-			res.send(error);
+			error = ' ';
+			// res.send(error);
 			// res.render({
 			// 	error: error
 			// });
+
+			res.render('index', {
+				tab1: ' ',
+				// tab2: result[1][0],
+
+				tab3: ' ',
+				tab4list: ' ',
+				tab5: ' ',
+				tab6: ' ',
+
+				// tab7: result[6][0],
+				pictab:' ',
+				tabnum:num,
+				error: error,
+			});	
 		}else{
 			//更新文章阅读次数
 			var promise = updateLook_num(list.name);
@@ -614,12 +629,12 @@ exports.upnum = function(req, res){
 	console.log("pic");
 
 	Promise.all([promise1, promise2, promise3, promise4, promise5, promise6, promise7, promise8]).then(function (result){
-					if ((result[0] == '')||(result[2] == '')||(result[4] == '')||(result[5] == '')) 
+					if ((result[0] == '')||(result[2] == '')||(result[3] == '')||(result[4] == '')||(result[5] == '')) 
 					{
 						error = ' ';
 						console.log("result[0]:null");
 					}
-					else if((result[0].length > 1) || (result[2].length > 1) || (result[4].length > 1) || (result[5].length > 1) || (result[6].length > 1))
+					else if((result[0].length > 1) || (result[2].length > 1)||(result[3][0] == '') || (result[4].length > 1) || (result[5].length > 1) || (result[6].length > 1))
 					{
 						error = ' ';
 						console.log("render index error;");

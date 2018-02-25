@@ -1,3 +1,6 @@
+https://github.com/goldenrtiger/heiziweb.git
+github’À∫≈£∫goldenrtiger
+xujing123
 ‘À––MongoDB
 mongod --dbpath G:\work\LOL\web\database\mongodb\data\db1 --port 27018
 
