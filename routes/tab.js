@@ -3,14 +3,22 @@ var Pic = require('../models/pic'),
     fs = require('fs');
 var promise = require('promise');
 var URL = require('url');
+var DEBUG = 1;
 
 function addlist (req, res, val){
-	console.log("tab : addlist");
+	if (DEBUG == 1)
+	{
+		console.log("tab : addlist");
+	}
+
 	var empty = 0;
 	var title = req.body.addlisttitle;
 	var content = req.body.editor1;
 	var keyword = Math.random();//pic update不用这个keyword
-	console.log("keyword:"+keyword);
+	if (DEBUG == 1)
+	{
+		console.log("keyword:"+keyword);
+	}
 	if((title == "") || (content == "<p>请在这里输入列表内容</p>") || (keyword == "") || (val == ""))
 	{
 		res.send("请完整填写内容");
@@ -19,24 +27,41 @@ function addlist (req, res, val){
 	var date = getTimeNow();
 	var like_num = 0;
 	var look_num = 0;
-	console.log("title:"+title+"keyword:"+keyword+"val:"+val);
-	console.log("content:"+content);
+	if (DEBUG == 1)
+	{
+		console.log("title:"+title+"keyword:"+keyword+"val:"+val);
+		console.log("content:"+content);
+	}
 	if ((title == ' ') && (content == ' ') && (keyword == ' '))//todo
 	{
 		empty = 1;
 	}
-	console.log("empty:"+empty);
-	if ( (val.indexOf(".jpg") || val.indexOf(".png")) > 0 )
+	if (DEBUG == 1)
 	{
-		console.log("tab : addlist. this is pic.");
+		console.log("empty:"+empty);
+	}
+	console.log("indexof(png):"+val.indexOf(".png"));
+	console.log("indexof(jpg):"+val.indexOf(".jpg"));
+	if ( (val.indexOf(".png") > 0) || (val.indexOf(".jpg") > 0 ) )
+	{
+		if (DEBUG == 1)
+		{
+			console.log("tab : addlist. this is pic.");
+		}
 		if (empty == 1)
 		{
 			res.send("请填写增加内容");
 		}
 		else {
-		console.log("update content:"+title+content+keyword);
+		if (DEBUG == 1)
+		{
+			console.log("update content:"+title+content+keyword);
+		}
 		var promise = updatepiccontent(val, title, content, date, like_num,look_num);
-		console.log("start to update content:");
+		if (DEBUG == 1)
+		{
+			console.log("start to update content:");
+		}
 		promise.then(function (result){
 					res.send("添加成功");
 				}).catch(function (err){
@@ -68,9 +93,15 @@ function addlist (req, res, val){
 				like_num: 0,  //喜欢数量
 				look_num: 0 //浏览次数
 			};
-			console.log("addlist:"+listmess.name);
+			if (DEBUG == 1)
+			{
+				console.log("addlist:"+listmess.name);
+			}
 			var tab = new Tab(listmess);
-			console.log("new Tab");
+			if (DEBUG == 1)
+			{
+				console.log("new Tab");
+			}
 			tab.save(function (err, data){
 				if (err){
 					res.send(err);
@@ -86,26 +117,21 @@ function addlist (req, res, val){
 
 exports.getalllist = function(req,res){	
 	var error = '';
-	console.log("getalllist");
 	var promise1 = findTablist('tab1');
-	console.log("tab1");
 	var promise2 = findTablist('tab2');
-	console.log("tab2");
 	var promise3 = findTablist('tab3');
-	console.log("tab3");
 	var promise4 = findTablist('tab4');
-	console.log("tab4");
 	var promise5 = findTablist('tab5');
-	console.log("tab5");
 	var promise6 = findTablist('tab6');
-	console.log("tab6");
 	var promise7 = findTablist('tab7');
-	console.log("tab7");
 	var promise8 = findPiclist('pic');
 	console.log("pic");
 
 	Promise.all([promise1, promise2, promise3, promise4, promise5, promise6, promise7, promise8]).then(function (result){
-					console.log("index promise result[2]:"+result[2]);
+					if (DEBUG == 1)
+					{
+						console.log("index promise result[2]:"+result[2]);
+					}
 					if ((result[0] == '')||(result[2] == '') || (result[3] == '') || (result[4] == '')||(result[5] == '')) 
 					{
 						error = ' ';
@@ -123,8 +149,11 @@ exports.getalllist = function(req,res){
 					}
 					if (result[0] != '')
 					{
-						console.log("render index: result[0]"+result[0]);
-						console.log("render index: result[0][0]"+result[0][0]);
+						if (DEBUG == 1)
+						{	
+							console.log("render index: result[0]"+result[0]);
+							console.log("render index: result[0][0]"+result[0][0]);
+						}
 					}
 					res.render('index', {
 						tab1: result[0][0],
@@ -165,7 +194,10 @@ exports.getmanagelist = function(req,res){
 		var promise8 = findPiclist('pic');
 
 		Promise.all([promise1, promise2, promise3, promise4, promise5, promise6, promise7, promise8]).then(function (result){
-						console.log("tab1:"+result[0]);
+						if (DEBUG == 1)
+						{
+							console.log("tab1:"+result[0]);
+						}
 						res.render('manage', {
 							tab1list: result[0],
 							tab2list: result[1],
@@ -211,7 +243,10 @@ exports.edit_content = function(req, res){
 						error: error
 					});
 				}else{//todo
-					console.log("edit list:"+list);
+					if (DEBUG == 1)
+					{
+						console.log("edit list:"+list);
+					}
 					promise.then(function (result){
 						console.log("edit promise:"+result.length);
 						res.render('editcontent', {
@@ -219,6 +254,7 @@ exports.edit_content = function(req, res){
 						    tab: list,
 							pictab:result,
 						    error:'',
+			    			// changeablecontent: '列表title',
 						});	
 					}).catch(function (err){
 						console.log(err);
@@ -226,7 +262,7 @@ exports.edit_content = function(req, res){
 				}		
 			});
 		}
-		else if (type == "1")
+		else if (type == "1")//图片
 		{
 			var promise = findPiclist('pic');
 			Pic.findOne({keyword: keyword}, function (err, list){
@@ -236,7 +272,9 @@ exports.edit_content = function(req, res){
 						error: error
 					});
 				}else{//todo
-					console.log("edit list:"+list);
+					if (DEBUG == 1){
+						console.log("edit list:"+list);
+					}
 					promise.then(function (result){
 						console.log("edit promise:"+result.length);
 						res.render('editcontent', {
@@ -244,6 +282,7 @@ exports.edit_content = function(req, res){
 						    tab: list,
 							pictab:result,
 						    error:'',
+			    			// changeablecontent: '列表title',
 						});	
 					}).catch(function (err){
 						console.log(err);
@@ -319,6 +358,7 @@ exports.write_content = function(req, res){
 			    tab1:0,
 				pictab:result,
 			    error:'',
+			    // changeablecontent: '列表title',
 			});	
 		}).catch(function (err){
 			console.log(err);
@@ -354,12 +394,16 @@ exports.addcontent = function(req, res){
 						error: error
 					});
 				}else{//todo
-					console.log("edit list:"+list);
+					if (DEBUG == 1){
+						console.log("edit list:"+list);
+					}
 					var name = req.body.addlistname;
 					var title = req.body.addlisttitle;
 					var content = req.body.editor1;
 					var date = getTimeNow();
-					console.log("title:"+title+"content:"+content+"name:"+name);
+					if (DEBUG == 1){
+						console.log("title:"+title+"content:"+content+"name:"+name);
+					}
 
 					var promise = updatetabcontent(val_kw,name,title,content,date,0,0,list.tab_num);
 					console.log("start to update content:");
@@ -382,7 +426,9 @@ exports.addcontent = function(req, res){
 						error: error
 					});
 				}else{//todo
-					console.log("edit list:"+list);
+					if (DEBUG == 1){
+						console.log("edit list:"+list);
+					}
 					// var name = req.body.addlistname;
 					var name = list.name;
 					var title = req.body.addlisttitle;
@@ -498,18 +544,26 @@ exports.getpiccontent = function (req, res){
 		}else{
 			//更新文章阅读次数
 			var promise = picupdateLook_num(picname);
-			promise.then(function (result){
-				res.render('listdetail', {
-				    title: list.title,
-				    content: list.content,
-				    date:list.date,
-				    error:'',
-				    look_num: list.look_num+1,
-				});	
-			}).catch(function (err){
-				console.log(err);
-			});
-
+			// promise.then(function (result){
+			// 	res.render('listdetail', {
+			// 	    title: list.title,
+			// 	    content: list.content,
+			// 	    date:list.date,
+			// 	    error:'',
+			// 	    look_num: list.look_num+1,
+			// 	});	
+			// }).catch(function (err){
+			// 	console.log(err);
+			// });
+			// var content = list.content;
+			// console.log("list.content:"+content);
+			// content = content.replace(/<p>/,"");
+			// content = content.replace(/<\/p>/,"");
+			// encodeURI(content);
+			// console.log("list.content:"+content+"contenttypeof:"+typeof content+"req method"+req.method);
+			// content = "https://www.baidu.com";
+			var title = list.title;
+			res.redirect(title);
 		}
 		
 	});
@@ -610,21 +664,13 @@ exports.upnum = function(req, res){
 		}		
 	});
 	var error = '';
-	console.log("getalllist");
 	var promise1 = findTablist('tab1');
-	console.log("tab1");
 	var promise2 = findTablist('tab2');
-	console.log("tab2");
 	var promise3 = findTablist('tab3');
-	console.log("tab3");
 	var promise4 = findTablist('tab4');
-	console.log("tab4");
 	var promise5 = findTablist('tab5');
-	console.log("tab5");
 	var promise6 = findTablist('tab6');
-	console.log("tab6");
 	var promise7 = findTablist('tab7');
-	console.log("tab7");
 	var promise8 = findPiclist('pic');
 	console.log("pic");
 
@@ -646,8 +692,10 @@ exports.upnum = function(req, res){
 					}
 					if (result[4] != '')
 					{
-						console.log("render index: result[4]"+result[4]);
-						console.log("render index: result[4][0]"+result[4][0]);
+						if (DEBUG == 1){
+							console.log("render index: result[4]"+result[4]);
+							console.log("render index: result[4][0]"+result[4][0]);
+						}
 					}
 					res.render('index', {
 						tab1: result[0][0],

@@ -23,9 +23,6 @@
 
 
     <script type="text/javascript">
-      $(document).ready(function() {
-
-      });
       
     </script>
 
@@ -58,7 +55,7 @@
     <p>导航栏修改</p> 
       <div class="form-group">
         <label for="addtabsel">名称</label>
-        <select class="combobox" name="addtabsel">
+        <select id = "tabop" class="combobox" name="addtabsel" onchange="selectcity()">
           <option value="tab1">推广动态</option>
           <option value="tab3">推广清单</option>
           <option value="tab4">网贷资讯</option>
@@ -109,17 +106,21 @@
              placeholder="<%=tab.keyword%>" value="<%=keyword%>">
       </div> -->
       <div class="form-group">
-        <label for="addlisttitle">列表title</label>
+        <label for="addlisttitle">列表title或图片网址(http://或https://)</label>
         <input type="text" class="form-control" id="addlisttitle" name="addlisttitle" 
              placeholder="<%=tab.title%>" value="<%=title%>" MaxLenth="25">
       </div>
 
+      <%
+        if (tab1 != 2)
+        {
+      %>
       <textarea name="editor1" id="editor1" rows="10" cols="80">
           <%=tab.content%>
       </textarea>
-      <script>
-          CKEDITOR.replace( 'editor1' );
-      </script>
+      <%
+        }
+      %>
 
     <button name="btn_addc" class="btn btn-default" value = "add?id=<%=tab1%>&kw=<%=tab.keyword%>" style="margin-top: 2%">发表</button>
     <button name="btn_printc" class="btn btn-default" value = "print" style="margin-top: 2%">预览</button>
@@ -141,6 +142,22 @@
       <p>© Copyright </p>
     </div>
   </footer>
+  <script type="text/javascript">
+    var editor = CKEDITOR.replace( 'editor1' );
+    CKEDITOR.on('instanceReady', function (ev) {
+                   editor = ev.editor;
+               });
+
+    function selectcity() {
+      var index=document.getElementById("tabop").selectedIndex;
+      // console.log("changed:pic"+index);
+      if (index >= 5)
+      {
+        editor.setReadOnly(true);
+        // changeablecontent = 'pic网址';
+      }
+    }
+  </script>
 
   
 
