@@ -125,7 +125,7 @@
                 for (var i = pictab.length - 1; i >= 0; i--){ 
                   var piclistitem = pictab[i];              
             %>            
-            <li class="list-group-item"><%= piclistitem.title %><span style="float: right;"><a href="edit?keyword=<%= piclistitem.keyword %>&pic=1">编辑</a></span></li>
+            <li class="list-group-item"><%= piclistitem.name %>&nbsp;|&nbsp;<%= piclistitem.title %><span style="float: right;"><a href="edit?keyword=<%= piclistitem.keyword %>&pic=1">编辑</a></span></li>
             <%
               }
             }else{
