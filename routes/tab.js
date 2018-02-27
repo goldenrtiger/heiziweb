@@ -563,6 +563,7 @@ exports.getpiccontent = function (req, res){
 			// console.log("list.content:"+content+"contenttypeof:"+typeof content+"req method"+req.method);
 			// content = "https://www.baidu.com";
 			var title = list.title;
+			console.log("pic website:"+title);
 			res.redirect(title);
 		}
 		
