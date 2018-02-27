@@ -564,7 +564,14 @@ exports.getpiccontent = function (req, res){
 			// content = "https://www.baidu.com";
 			var title = list.title;
 			console.log("pic website:"+title);
-			res.redirect(title);
+
+			if (title.indexOf("http") < 0) {
+				res.send("图片链接错误");
+			}
+			else {
+				res.redirect(title);
+
+			}
 		}
 		
 	});
