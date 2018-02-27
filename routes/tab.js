@@ -564,7 +564,7 @@ exports.getpiccontent = function (req, res){
 			// content = "https://www.baidu.com";
 			var title = list.title;
 			console.log("pic website:"+title);
-			res.redirect(title);
+			res.redirect("www.baidu.com");
 		}
 		
 	});
