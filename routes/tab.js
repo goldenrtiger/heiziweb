@@ -531,50 +531,60 @@ exports.searchkw = function(req, res){
 
 //获得某条list的信息，并更新浏览次数
 exports.getpiccontent = function (req, res){
-	var picname = req.body.submit;
-	var error = '';
-	console.log("pic name:"+picname);	
-	Pic.findOne({name: picname}, function (err, list){
-		if (list == null){
-			error = '该文章不存在！';
-			res.send(error);
-			// res.render({
-			// 	error: error
-			// });
-		}else{
-			//更新文章阅读次数
-			var promise = picupdateLook_num(picname);
-			// promise.then(function (result){
-			// 	res.render('listdetail', {
-			// 	    title: list.title,
-			// 	    content: list.content,
-			// 	    date:list.date,
-			// 	    error:'',
-			// 	    look_num: list.look_num+1,
-			// 	});	
-			// }).catch(function (err){
-			// 	console.log(err);
-			// });
-			// var content = list.content;
-			// console.log("list.content:"+content);
-			// content = content.replace(/<p>/,"");
-			// content = content.replace(/<\/p>/,"");
-			// encodeURI(content);
-			// console.log("list.content:"+content+"contenttypeof:"+typeof content+"req method"+req.method);
-			// content = "https://www.baidu.com";
-			var title = list.title;
-			console.log("pic website:"+title);
+	// var picname = req.body.submit;
+	// var error = '';
+	// console.log("pic name:"+picname);	
+	// Pic.findOne({name: picname}, function (err, list){
+	// 	if (list == null){
+	// 		error = '该文章不存在！';
+	// 		res.send(error);
+	// 		// res.render({
+	// 		// 	error: error
+	// 		// });
+	// 	}else{
+	// 		//更新文章阅读次数
+	// 		var promise = picupdateLook_num(picname);
+	// 		// promise.then(function (result){
+	// 		// 	res.render('listdetail', {
+	// 		// 	    title: list.title,
+	// 		// 	    content: list.content,
+	// 		// 	    date:list.date,
+	// 		// 	    error:'',
+	// 		// 	    look_num: list.look_num+1,
+	// 		// 	});	
+	// 		// }).catch(function (err){
+	// 		// 	console.log(err);
+	// 		// });
+	// 		// var content = list.content;
+	// 		// console.log("list.content:"+content);
+	// 		// content = content.replace(/<p>/,"");
+	// 		// content = content.replace(/<\/p>/,"");
+	// 		// encodeURI(content);
+	// 		// console.log("list.content:"+content+"contenttypeof:"+typeof content+"req method"+req.method);
+	// 		// content = "https://www.baidu.com";
+	// 		var title = list.title;
+	// 		console.log("pic website:"+title);
 
-			if (title.indexOf("http") < 0) {
-				res.send("图片链接错误");
-			}
-			else {
-				res.redirect(title);
+	// 		if (title.indexOf("http") < 0) {
+	// 			res.send("图片链接错误");
+	// 		}
+	// 		else {
+	// 			res.redirect(title);
 
-			}
-		}
+	// 		}
+	// 	}
 		
-	});
+	// });
+	var title = req.query.title;
+	console.log("pic website:"+title);
+
+	if (title.indexOf("http") < 0) {
+		res.send("图片链接错误");
+	}
+	else {
+		res.redirect(title);
+
+	}
 }
 exports.searchtab = function (req, res){
 	var val = req.query.name;

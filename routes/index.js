@@ -34,7 +34,7 @@ router.post('/addcontent', function(req, res, next){
   tab.addcontent(req,res);
 });
 
-router.post('/picclick', tab.getpiccontent);
+router.get('/picclick', tab.getpiccontent);
 
 router.get('/manage', tab.getmanagelist);
 
