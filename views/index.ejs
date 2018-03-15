@@ -325,6 +325,30 @@
     function getbyid(id) {
         return document.getElementById(id);
     };
+    function bhome() {
+      var scrollPos;
+      if (typeof window.pageYOffset != 'undefined') 
+      { 
+         scrollPos = window.pageYOffset; 
+         window.pageYOffset = 0;
+      } 
+      else if (typeof document.compatMode != 'undefined' &&    document.compatMode != 'BackCompat') 
+      { 
+         scrollPos = document.documentElement.scrollTop; 
+         document.documentElement.scrollTop = 0;
+      } 
+      else if (typeof document.body != 'undefined') 
+      { 
+         scrollPos = document.body.scrollTop; 
+         document.body.scrollTop = 0;
+      } 
+      //alert(scrollPos);
+    };
+    function nbhome(){      
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+      window.pageYOffset = 0;
+    }
     $(document).ready(function(){
       console.log("tabnum:"+tabnum);
       if ('tab1' == tabnum)
@@ -353,7 +377,7 @@
       console.log("contentpos:"+contentpos);
       console.log("search1");
       // var content = $('#blog-content').html();
-      console.log("blog-content:"+content);
+      //console.log("blog-content:"+content);
       var searchText = getbyid("srch-term").value;
       console.log("searchText:"+searchText);      
       if (searchText != "")
@@ -372,6 +396,7 @@
           // var Y = $('#result').offset().top - winht/2 - 100;
           var Y = $('#result').offset().top - contentpos;
           Y = Y + $("#article1").scrollTop();
+          nbhome();
           console.log("X:"+X+"Y:"+Y);
           // alert($("#article1").scrollTop()+" px");
           $("#article1").scrollTop(Y);          
@@ -386,7 +411,7 @@
       var contentpos = $('#article3').offset().top;
       console.log("search3");
       // var content = $('#blog-content2').html();
-      console.log("blog-content:"+content3);
+      //console.log("blog-content:"+content3);
       var searchText = getbyid("srch-term3").value;
       console.log("searchText:"+searchText);
       if (searchText != "")
@@ -402,6 +427,7 @@
           var X = $('#result').offset().left;
           var Y = $('#result').offset().top - contentpos;
           Y = Y + $("#article3").scrollTop();
+          nbhome();
           console.log("X:"+X+"Y:"+Y);
           // alert($("#article3").scrollTop()+" px");
           $("#article3").scrollTop(Y);          
@@ -416,7 +442,7 @@
       console.log("search5");
       var contentpos = $('#article5').offset().top;
       // var content = $('#blog-content5').html();
-      console.log("blog-conten5:"+content5);
+      //console.log("blog-conten5:"+content5);
       var searchText = getbyid("srch-term5").value;
       console.log("searchTex5:"+searchText);
       if (searchText != "")
@@ -432,6 +458,7 @@
           var X = $('#result').offset().left;
           var Y = $('#result').offset().top - contentpos;
           Y = Y + $("#article5").scrollTop();
+          nbhome();
           console.log("X:"+X+"Y:"+Y);
           // alert($("#article5").scrollTop()+" px");
           $("#article5").scrollTop(Y);    
@@ -462,6 +489,7 @@
           var X = $('#result').offset().left;
           var Y = $('#result').offset().top - contentpos;
           Y = Y + $("#article6").scrollTop();
+          nbhome();
           console.log("X:"+X+"Y:"+Y);
           // alert($("#article6").scrollTop()+" px");
           $("#article6").scrollTop(Y);    
